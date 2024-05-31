@@ -10,6 +10,10 @@
     <color name="gray_light">#B0BEC5</color>
     <color name="gray_dark">#455A64</color>
     <color name="brown">#757575</color>
-    <color name="teal_200">#455A64</color>
-    <color name="teal_700">#757575</color>
+<!--Color Palette-->
+    <color name="brown_logo">#FFA87028</color>
+    <color name="Beige">#F5EFE7</color>
+    <color name="Navy">#213555</color>
+    <color name="Navy_light">#4F709C</color>
+    <color name="Beige_dark">#D8C4B6</color>
 </resources>
