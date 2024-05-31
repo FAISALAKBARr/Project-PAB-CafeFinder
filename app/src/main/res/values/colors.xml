@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="maroon">#511111</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="sailor_blue">#00203F</color>
+    <color name="sky_white">#FBF6F3</color>
+    <color name="gray">#607D8B</color>
+    <color name="gray_light">#B0BEC5</color>
+    <color name="gray_dark">#455A64</color>
+    <color name="brown">#757575</color>
+    <color name="teal_200">#455A64</color>
+    <color name="teal_700">#757575</color>
+</resources>
