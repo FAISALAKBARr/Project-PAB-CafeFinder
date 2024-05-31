@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Tone</string>
+    <string name="app_name">Cafe Finder</string>
     <string name="lyrics">Lyrics</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
@@ -17,7 +17,7 @@
     <string name="universitas">Universitas Sebelas Maret</string>
     <string name="isi_email">faisalzogg022@gmail.com</string>
     <string name="share_button">SHARE</string>
-    <string name="description_app">TONE APP</string>
+    <string name="description_app">CAFE FINDER APP</string>
     <string name="description_long_app">Tone App adalah sebuah aplikasi musik inovatif yang dirancang untuk memberikan pengalaman mendengarkan musik yang dipersonalisasi dan menyeluruh. Mirip dengan aplikasi populer seperti Spotify, Tone App menyediakan berbagai fitur untuk memanjakan penggemar musik dari segala usia dan genre.</string>
     <string name="play">Play</string>
     <string name="sedang_hangat">Top Song</string>
