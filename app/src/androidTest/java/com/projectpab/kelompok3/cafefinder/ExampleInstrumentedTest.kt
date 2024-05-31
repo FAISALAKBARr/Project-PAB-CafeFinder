@@ -1,4 +1,4 @@
-package com.l0122094.faisalakbar.tone
+package com.projectpab.kelompok3.cafefinder
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

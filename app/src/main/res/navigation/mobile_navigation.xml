@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.l0122094.faisalakbar.tone.ui.home.HomeFragment"
+        android:name="com.projectpab.kelompok3.cafefinder.ui.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -17,7 +17,7 @@
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.l0122094.faisalakbar.tone.ui.dashboard.DashboardFragment"
+        android:name="com.projectpab.kelompok3.cafefinder.ui.dashboard.DashboardFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_dashboard" >
         <action
@@ -36,7 +36,7 @@
 
     <fragment
         android:id="@+id/navigation_profile"
-        android:name="com.l0122094.faisalakbar.tone.ui.profile.ProfileFragment"
+        android:name="com.projectpab.kelompok3.cafefinder.ui.profile.ProfileFragment"
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_profile" >
         <action
@@ -45,11 +45,11 @@
     </fragment>
     <activity
         android:id="@+id/mainActivity"
-        android:name="com.l0122094.faisalakbar.tone.MainActivity"
+        android:name="com.projectpab.kelompok3.cafefinder.MainActivity"
         android:label="fragment_dashboard"
         tools:layout="@layout/fragment_dashboard" />
     <activity
         android:id="@+id/songDetailActivity"
-        android:name="com.l0122094.faisalakbar.tone.SongDetailActivity"
+        android:name="com.projectpab.kelompok3.cafefinder.SongDetailActivity"
         android:label="SongDetailActivity" />
 </navigation>

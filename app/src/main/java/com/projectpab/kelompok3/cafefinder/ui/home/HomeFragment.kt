@@ -1,11 +1,11 @@
-package com.l0122094.faisalakbar.tone.ui.home
+package com.projectpab.kelompok3.cafefinder.ui.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.l0122094.faisalakbar.tone.databinding.FragmentHomeBinding
+import com.projectpab.kelompok3.cafefinder.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
 

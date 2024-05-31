@@ -1,4 +1,4 @@
-package com.l0122094.faisalakbar.tone.ui.dashboard
+package com.projectpab.kelompok3.cafefinder.ui.dashboard
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -7,9 +7,9 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.l0122094.faisalakbar.tone.R
-import com.l0122094.faisalakbar.tone.Song
-import com.l0122094.faisalakbar.tone.SongDetailActivity
+import com.projectpab.kelompok3.cafefinder.R
+import com.projectpab.kelompok3.cafefinder.Song
+import com.projectpab.kelompok3.cafefinder.SongDetailActivity
 
 class ListSongAdapter (private val listSong: ArrayList<Song>) : RecyclerView.Adapter<ListSongAdapter.ListViewHolder>() {
     private lateinit var onItemClickCallback: OnItemClickCallback

@@ -1,4 +1,4 @@
-package com.l0122094.faisalakbar.tone
+package com.projectpab.kelompok3.cafefinder
 
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -7,7 +7,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import com.l0122094.faisalakbar.tone.databinding.ActivityMainBinding
+import com.projectpab.kelompok3.cafefinder.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 

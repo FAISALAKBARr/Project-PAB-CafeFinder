@@ -1,14 +1,13 @@
-package com.l0122094.faisalakbar.tone.ui.dashboard
+package com.projectpab.kelompok3.cafefinder.ui.dashboard
 
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.GridLayoutManager
-import com.l0122094.faisalakbar.tone.R
-import com.l0122094.faisalakbar.tone.databinding.FragmentDashboardBinding
-import com.l0122094.faisalakbar.tone.Song
+import com.projectpab.kelompok3.cafefinder.R
+import com.projectpab.kelompok3.cafefinder.databinding.FragmentDashboardBinding
+import com.projectpab.kelompok3.cafefinder.Song
 
 class DashboardFragment : Fragment() {
 

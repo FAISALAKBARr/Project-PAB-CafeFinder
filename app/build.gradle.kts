@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.l0122094.faisalakbar.tone"
+    namespace = "com.projectpab.kelompok3.cafefinder"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.l0122094.faisalakbar.tone"
+        applicationId = "com.projectpab.kelompok3.cafefinder"
         minSdk = 30
         targetSdk = 34
         versionCode = 1

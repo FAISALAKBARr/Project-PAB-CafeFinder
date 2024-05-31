@@ -1,11 +1,11 @@
-package com.l0122094.faisalakbar.tone.ui.profile
+package com.projectpab.kelompok3.cafefinder.ui.profile
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.l0122094.faisalakbar.tone.R
+import com.projectpab.kelompok3.cafefinder.R
 import android.content.Intent
 import android.widget.TextView
 
