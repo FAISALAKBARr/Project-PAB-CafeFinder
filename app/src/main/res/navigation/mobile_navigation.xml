@@ -17,7 +17,7 @@
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.projectpab.kelompok3.cafefinder.ui.dashboard.DashboardFragment"
+        android:name="com.projectpab.kelompok3.cafefinder.ui.dashboard.CafeFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_dashboard" >
         <action
@@ -36,9 +36,9 @@
 
     <fragment
         android:id="@+id/navigation_profile"
-        android:name="com.projectpab.kelompok3.cafefinder.ui.profile.ProfileFragment"
+        android:name="com.projectpab.kelompok3.cafefinder.ui.favorite.FavoriteFragment"
         android:label="@string/title_profile"
-        tools:layout="@layout/fragment_profile" >
+        tools:layout="@layout/fragment_favorite" >
         <action
             android:id="@+id/action_navigation_profile_to_navigation_home"
             app:destination="@id/navigation_home" />
@@ -50,6 +50,6 @@
         tools:layout="@layout/fragment_dashboard" />
     <activity
         android:id="@+id/songDetailActivity"
-        android:name="com.projectpab.kelompok3.cafefinder.SongDetailActivity"
+        android:name="com.projectpab.kelompok3.cafefinder.CafeDetailActivity"
         android:label="SongDetailActivity" />
 </navigation>

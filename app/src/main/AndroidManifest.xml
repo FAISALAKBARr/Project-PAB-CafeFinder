@@ -22,7 +22,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.projectpab.kelompok3.cafefinder.SongDetailActivity"
+        <activity android:name="com.projectpab.kelompok3.cafefinder.CafeDetailActivity"
             android:exported="false"
             android:label="@string/title_dashboard"/>
     </application>

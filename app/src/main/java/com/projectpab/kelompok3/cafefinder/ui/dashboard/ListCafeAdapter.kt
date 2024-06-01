@@ -8,10 +8,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.projectpab.kelompok3.cafefinder.R
-import com.projectpab.kelompok3.cafefinder.Song
-import com.projectpab.kelompok3.cafefinder.SongDetailActivity
+import com.projectpab.kelompok3.cafefinder.Cafe
+import com.projectpab.kelompok3.cafefinder.CafeDetailActivity
 
-class ListSongAdapter (private val listSong: ArrayList<Song>) : RecyclerView.Adapter<ListSongAdapter.ListViewHolder>() {
+class ListCafeAdapter (private val listCafe: ArrayList<Cafe>) : RecyclerView.Adapter<ListCafeAdapter.ListViewHolder>() {
     private lateinit var onItemClickCallback: OnItemClickCallback
 
     fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
@@ -25,19 +25,19 @@ class ListSongAdapter (private val listSong: ArrayList<Song>) : RecyclerView.Ada
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
-        val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_row_song, parent, false)
+        val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_row_cafe, parent, false)
         return ListViewHolder(view)
     }
 
-    override fun getItemCount(): Int = listSong.size
+    override fun getItemCount(): Int = listCafe.size
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        val (name, desc, img, audio) = listSong[position]
+        val (name, desc, img, audio) = listCafe[position]
         holder.imgPhoto.setImageResource(img)
         holder.tvName.text = name
         holder.tvDescription.text = desc
         holder.itemView.setOnClickListener {
-            val intent = Intent(holder.itemView.context, SongDetailActivity::class.java).apply {
+            val intent = Intent(holder.itemView.context, CafeDetailActivity::class.java).apply {
                 putExtra("SONG_NAME", name)
                 putExtra("SONG_DESC", desc)
                 putExtra("SONG_IMG_RES_ID", img)
@@ -48,6 +48,6 @@ class ListSongAdapter (private val listSong: ArrayList<Song>) : RecyclerView.Ada
     }
 
     interface OnItemClickCallback{
-        fun onItemClicked(data: Song)
+        fun onItemClicked(data: Cafe)
     }
 }

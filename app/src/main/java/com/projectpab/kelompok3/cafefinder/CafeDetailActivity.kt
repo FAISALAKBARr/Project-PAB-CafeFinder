@@ -8,13 +8,13 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import de.hdodenhof.circleimageview.CircleImageView
 
-class SongDetailActivity : AppCompatActivity() {
+class CafeDetailActivity : AppCompatActivity() {
     private var mediaPlayer: MediaPlayer? = null
     private var songAudio: Int = -1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_song_detail)
+        setContentView(R.layout.activity_cafe_detail)
 
         val songName = intent.getStringExtra("SONG_NAME")
         val songDesc = intent.getStringExtra("SONG_DESC")

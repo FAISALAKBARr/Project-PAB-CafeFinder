@@ -1,4 +1,4 @@
-package com.projectpab.kelompok3.cafefinder.ui.profile
+package com.projectpab.kelompok3.cafefinder.ui.favorite
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,7 +9,7 @@ import com.projectpab.kelompok3.cafefinder.R
 import android.content.Intent
 import android.widget.TextView
 
-class ProfileFragment : Fragment() {
+class FavoriteFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -17,7 +17,7 @@ class ProfileFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout with the correct parent parameter
-        return inflater.inflate(R.layout.fragment_profile,container,false)
+        return inflater.inflate(R.layout.fragment_favorite,container,false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

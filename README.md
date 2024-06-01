@@ -6,7 +6,7 @@
 <br>
 
 <br>
-Repo ini merupakan tempat mengerjakan tugas PAB 2024 kelompok 3, dimana setiapa anggota mengerjakan seuai di branchnya masing-masing, lalu dilakukan merege pada main branch.
+Repo ini merupakan tempat mengerjakan tugas PAB 2024 kelompok 3, dimana setiapa anggota mengerjakan sesuai di branchnya masing-masing, lalu dilakukan merege pada main branch.
 
 ## Anggota Kelompok
 1. Khansa

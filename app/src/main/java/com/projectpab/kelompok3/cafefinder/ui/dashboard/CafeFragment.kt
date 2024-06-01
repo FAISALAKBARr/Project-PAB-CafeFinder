@@ -7,13 +7,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.GridLayoutManager
 import com.projectpab.kelompok3.cafefinder.R
 import com.projectpab.kelompok3.cafefinder.databinding.FragmentDashboardBinding
-import com.projectpab.kelompok3.cafefinder.Song
+import com.projectpab.kelompok3.cafefinder.Cafe
 
-class DashboardFragment : Fragment() {
+class CafeFragment : Fragment() {
 
     private var _binding: FragmentDashboardBinding? = null
     private val binding get() = _binding!!
-    private lateinit var adapter: ListSongAdapter
+    private lateinit var adapter: ListCafeAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -24,28 +24,28 @@ class DashboardFragment : Fragment() {
         _binding = FragmentDashboardBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        adapter = ListSongAdapter(generateSongList())
+        adapter = ListCafeAdapter(generateSongList())
         binding.rvSong.adapter = adapter
         binding.rvSong.layoutManager = LinearLayoutManager(context)
 
         return root
     }
 
-    private fun generateSongList(): ArrayList<Song> {
+    private fun generateSongList(): ArrayList<Cafe> {
         val songNames = resources.getStringArray(R.array.data_name)
         val songDescriptions = resources.getStringArray(R.array.data_desc)
         val songImages = resources.obtainTypedArray(R.array.data_img)
         val songAudios = resources.obtainTypedArray(R.array.data_audio)
 
-        val songList = ArrayList<Song>()
+        val cafeList = ArrayList<Cafe>()
         for (i in songNames.indices) {
-            val song = Song(songNames[i], songDescriptions[i], songImages.getResourceId(i, -1), songAudios.getResourceId(i, -1))
-            songList.add(song)
+            val cafe = Cafe(songNames[i], songDescriptions[i], songImages.getResourceId(i, -1), songAudios.getResourceId(i, -1))
+            cafeList.add(cafe)
         }
         songImages.recycle()
         songAudios.recycle()
 
-        return songList
+        return cafeList
     }
 
     override fun onDestroyView() {
