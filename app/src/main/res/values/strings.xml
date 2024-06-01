@@ -2,8 +2,8 @@
     <string name="app_name">Cafe Finder</string>
     <string name="lyrics">Lyrics</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_profile">Profile</string>
+    <string name="title_cafe">Cafe</string>
+    <string name="title_favorite">Favorite</string>
     <string name="list">List</string>
     <string name="grid">Grid</string>
     <string name="goto_back">Back</string>

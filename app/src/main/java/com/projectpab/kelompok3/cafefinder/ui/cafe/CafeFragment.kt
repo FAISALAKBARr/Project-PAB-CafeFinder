@@ -1,4 +1,4 @@
-package com.projectpab.kelompok3.cafefinder.ui.dashboard
+package com.projectpab.kelompok3.cafefinder.ui.cafe
 
 import android.os.Bundle
 import android.view.*
@@ -6,12 +6,12 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.GridLayoutManager
 import com.projectpab.kelompok3.cafefinder.R
-import com.projectpab.kelompok3.cafefinder.databinding.FragmentDashboardBinding
+import com.projectpab.kelompok3.cafefinder.databinding.FragmentCafeBinding
 import com.projectpab.kelompok3.cafefinder.Cafe
 
 class CafeFragment : Fragment() {
 
-    private var _binding: FragmentDashboardBinding? = null
+    private var _binding: FragmentCafeBinding? = null
     private val binding get() = _binding!!
     private lateinit var adapter: ListCafeAdapter
 
@@ -21,7 +21,7 @@ class CafeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        _binding = FragmentDashboardBinding.inflate(inflater, container, false)
+        _binding = FragmentCafeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         adapter = ListCafeAdapter(generateSongList())

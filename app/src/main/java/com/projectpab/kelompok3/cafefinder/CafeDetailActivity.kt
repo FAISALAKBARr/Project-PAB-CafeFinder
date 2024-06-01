@@ -34,7 +34,7 @@ class CafeDetailActivity : AppCompatActivity() {
 
     fun gotoMain(view: View) {
         val intent = Intent(this, MainActivity::class.java).apply {
-            putExtra("SELECTED_TAB", R.id.navigation_dashboard)
+            putExtra("SELECTED_TAB", R.id.navigation_cafe)
         }
         startActivity(intent)
     }

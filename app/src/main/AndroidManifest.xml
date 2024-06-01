@@ -24,7 +24,7 @@
         </activity>
         <activity android:name="com.projectpab.kelompok3.cafefinder.CafeDetailActivity"
             android:exported="false"
-            android:label="@string/title_dashboard"/>
+            android:label="@string/title_cafe"/>
     </application>
 
 </manifest>

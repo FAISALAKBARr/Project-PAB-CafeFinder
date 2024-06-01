@@ -1,4 +1,4 @@
-package com.projectpab.kelompok3.cafefinder.ui.dashboard
+package com.projectpab.kelompok3.cafefinder.ui.cafe
 
 import android.content.Intent
 import android.view.LayoutInflater

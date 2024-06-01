@@ -1,4 +1,4 @@
-package com.projectpab.kelompok3.cafefinder.ui.dashboard
+package com.projectpab.kelompok3.cafefinder.ui.cafe
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
