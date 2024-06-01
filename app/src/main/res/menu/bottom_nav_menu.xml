@@ -17,7 +17,7 @@
 
     <item
         android:id="@+id/navigation_favorite"
-        android:icon="@drawable/baseline_account_circle_24"
+        android:icon="@drawable/favorite_24dp_fill"
         android:title="@string/title_favorite"
         tools:layout="@layout/fragment_favorite" />
 
