@@ -63,7 +63,7 @@ class CafeFragment : Fragment() {
         if (query != null) {
             val filteredList = ArrayList<Cafe>()
             for (Cafe in listCafe) {
-                if (Cafe.name.toLowerCase(Locale.ROOT).contains(query)) {
+                if (Cafe.name.toLowerCase(Locale.ROOT).contains(query.toLowerCase(Locale.ROOT))) {
                     filteredList.add(Cafe)
                 }
             }
