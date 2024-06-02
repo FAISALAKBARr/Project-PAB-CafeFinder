@@ -11,7 +11,7 @@ import com.projectpab.kelompok3.cafefinder.R
 import com.projectpab.kelompok3.cafefinder.Cafe
 import com.projectpab.kelompok3.cafefinder.CafeDetailActivity
 
-class ListCafeAdapter (private val listCafe: ArrayList<Cafe>) : RecyclerView.Adapter<ListCafeAdapter.ListViewHolder>() {
+class ListCafeAdapter (private var listCafe: ArrayList<Cafe>) : RecyclerView.Adapter<ListCafeAdapter.ListViewHolder>() {
     private lateinit var onItemClickCallback: OnItemClickCallback
 
     fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
@@ -22,6 +22,11 @@ class ListCafeAdapter (private val listCafe: ArrayList<Cafe>) : RecyclerView.Ada
         val imgPhoto: ImageView = itemView.findViewById(R.id.img_item_photo)
         val tvName: TextView = itemView.findViewById(R.id.tv_song_name)
         val tvDescription: TextView = itemView.findViewById(R.id.tv_song_description)
+    }
+
+    fun setFilteredList(listCafe: ArrayList<Cafe>){
+        this.listCafe = listCafe
+        notifyDataSetChanged()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
@@ -45,6 +50,7 @@ class ListCafeAdapter (private val listCafe: ArrayList<Cafe>) : RecyclerView.Ada
             }
             holder.itemView.context.startActivity(intent)
         }
+
     }
 
     interface OnItemClickCallback{

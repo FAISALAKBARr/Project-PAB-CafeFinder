@@ -75,6 +75,58 @@
         <item>Kumpeni Indonesian Coffee and Ice Cream</item>
     </string-array>
 
+    <string-array name="data_categories">
+        <item>cash</item>
+        <item>cashless</item>
+    </string-array>
+
+    <string-array name="data_cash">
+        <item>cash</item>
+        <item>cashless</item>
+        <item>cash</item>
+        <item>cash</item>
+        <item>cashless</item>
+        <item>cash</item>
+        <item>cashless</item>
+        <item>cash</item>
+        <item>cash</item>
+        <item>cashless</item>
+        <item>cash</item>
+        <item>cashless</item>
+        <item>cash</item>
+        <item>cash</item>
+        <item>cashless</item>
+        <item>cash</item>
+        <item>cashless</item>
+        <item>cash</item>
+        <item>cash</item>
+        <item>cashless</item>
+    </string-array>
+
+
+    <string-array name="data_recommended">
+        <item>no</item>
+        <item>no</item>
+        <item>no</item>
+        <item>no</item>
+        <item>yes</item>
+        <item>yes</item>
+        <item>no</item>
+        <item>yes</item>
+        <item>no</item>
+        <item>yes</item>
+        <item>no</item>
+        <item>yes</item>
+        <item>yes</item>
+        <item>no</item>
+        <item>yes</item>
+        <item>no</item>
+        <item>no</item>
+        <item>yes</item>
+        <item>no</item>
+        <item>yes</item>
+    </string-array>
+
     <string-array name="data_desc_cafe">
         <item><![CDATA[Temukan pengalaman kopi yang unik di Paseban Kopi, di mana setiap cangkir menyajikan rasa khas dan otentik. Kami bangga menggunakan biji kopi pilihan yang diolah dengan penuh dedikasi untuk memastikan kualitas dan cita rasa yang sempurna.\nDi Paseban Kopi, kenyamanan dan keamanan pengunjung menjadi prioritas utama. Kafe kami dirancang dengan suasana yang hangat dan nyaman, ideal untuk bersantai, bekerja, atau berbincang dengan teman-teman.\nDatang dan nikmati secangkir kopi di Paseban Kopi, tempat di mana keunikan rasa bertemu dengan kenyamanan sempurna. Kami menantikan kehadiran Anda untuk menjelajahi berbagai pilihan kopi kami yang istimewa.]]></item>
         <item><![CDATA[Selamat datang di La Luna Coffee and Eatery, tempat yang sempurna untuk menikmati kopi sambil bersantai. Kafe kami menawarkan suasana yang cozy dengan pilihan area indoor dan outdoor, memberikan kenyamanan bagi setiap pengunjung.\nLa Luna Coffee and Eatery adalah tempat yang ideal untuk mengerjakan tugas atau sekadar bersantai. Dengan lingkungan yang tenang dan nyaman, Anda dapat fokus pada pekerjaan atau menikmati waktu luang dengan teman-teman.\nBerlokasi strategis, La Luna Coffee and Eatery mudah diakses dan cocok sebagai destinasi hangout. Datang dan nikmati berbagai menu spesial kami, baik untuk kopi maupun hidangan lezat lainnya. Kami menantikan kehadiran Anda!]]></item>
@@ -97,4 +149,27 @@
         <item><![CDATA[Jeeva Yogyakarta adalah kafe yang terletak di pusat kota, menawarkan suasana hangat dan nyaman yang cocok untuk bersantai. Kafe ini terkenal dengan makanan dan minuman yang sangat enak, menjadi tempat yang ideal untuk ngobrol santai di malam hari bersama keluarga atau teman.\nDi Jeeva Yogyakarta, Anda dapat menikmati pelayanan yang ramah dan atmosfer yang tenang, menjadikan setiap kunjungan menjadi pengalaman yang memuaskan. Dengan berbagai pilihan menu yang menggugah selera, kafe ini menghadirkan kombinasi sempurna antara kualitas dan kenyamanan.\nTemukan kehangatan dan keramahan di Jeeva Yogyakarta, tempat di mana setiap momen berharga dan menyenangkan.]]></item>
         <item><![CDATA[Selamat datang di Kumpeni Indonesian Coffee and Ice Cream, sebuah kafe dengan suasana dan interior yang jadul, menciptakan tempat yang nyaman untuk nongkrong santai. Kafe ini terkenal dengan ice cream jadul yang sangat enak, menawarkan pengalaman unik yang berbeda dari yang lain.\nVibes ala rumah Jawa yang kental di Kumpeni Indonesian Coffee and Ice Cream memberikan nuansa asik dan autentik. Anda juga dapat menikmati keindahan lukisan-lukisan yang memperkaya atmosfer kafe ini.\mTemukan kenikmatan dan kenyamanan di Kumpeni Indonesian Coffee and Ice Cream, di mana setiap kunjungan akan meninggalkan kesan yang tak terlupakan.]]></item>
     </string-array>
+
+    <integer-array name="data_img_cafe">
+        <item>@drawable/paseban</item>
+        <item>@drawable/laluna</item>
+        <item>@drawable/almamater</item>
+        <item>@drawable/eastside</item>
+        <item>@drawable/bahasa</item>
+        <item>@drawable/seperdua</item>
+        <item>@drawable/konnichiwa</item>
+        <item>@drawable/srengenge</item>
+        <item>@drawable/coldnbrew</item>
+        <item>@drawable/omah</item>
+        <item>@drawable/legend</item>
+        <item>@drawable/silol</item>
+        <item>@drawable/garden</item>
+        <item>@drawable/menoewa</item>
+        <item>@drawable/halohelo</item>
+        <item>@drawable/tanamera</item>
+        <item>@drawable/ngokow</item>
+        <item>@drawable/blanco</item>
+        <item>@drawable/jeeva</item>
+        <item>@drawable/kumpeni</item>
+    </integer-array>
 </resources>
