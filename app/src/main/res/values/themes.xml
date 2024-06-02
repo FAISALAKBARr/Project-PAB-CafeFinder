@@ -69,4 +69,8 @@
         <item name="android:layout_marginTop">16dp</item>
     </style>
 
+    <style name="RoundedCornersImage">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20dp</item> <!-- Adjust the size as needed -->
+    </style>
 </resources>
