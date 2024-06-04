@@ -23,4 +23,6 @@
     <string name="sedang_hangat">Top Cafe</string>
     <string name="welcome_back">Welcome back,</string>
     <string name="ready_to">Ready to begin your cafe journey?</string>
+    <string name="your_cafe_count">Your Cafe Count</string>
+    <string name="favorite_cafe">Favorite Cafe</string>
 </resources>
