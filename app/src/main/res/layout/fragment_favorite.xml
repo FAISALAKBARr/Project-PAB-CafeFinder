@@ -2,79 +2,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".ui.favorite.FavoriteFragment">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/profile_image"
-        style="@style/CircleImageViewProfile"
-        android:src="@drawable/ardhito"
-        app:civ_border_color="@color/black"
-        app:civ_border_width="3dp"
-        app:layout_constraintVertical_bias="0.498"
-        app:layout_constraintBottom_toTopOf="@+id/nim"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/nama"
-        android:text="@string/nama_lengkap"
-        style="@style/LayoutWrapContent"
-        android:layout_marginTop="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/nim"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile_image" />
-
-    <TextView
-        style="@style/LayoutWrapContent"
-        android:id="@+id/nim"
-        android:text="@string/nim"
-        android:layout_marginTop="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/jurusan"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_favorite"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nama" />
-
-    <TextView
-        android:id="@+id/jurusan"
-        style="@style/LayoutWrapContent"
-        android:text="@string/jurusan_angkatan"
-        android:layout_marginTop="5dp"
-        app:layout_constraintBottom_toTopOf="@+id/fakultas"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nim" />
-
-    <TextView
-        android:id="@+id/fakultas"
-        style="@style/LayoutWrapContent"
-        android:text="@string/fakultas"
-        android:layout_marginTop="5dp"
-        app:layout_constraintBottom_toTopOf="@+id/universitas"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/jurusan" />
-
-    <TextView
-        android:id="@+id/universitas"
-        style="@style/LayoutWrapContent"
-        android:text="@string/universitas"
-        android:layout_marginTop="5dp"
-        app:layout_constraintBottom_toTopOf="@+id/email"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fakultas" />
-
-    <TextView
-        android:id="@+id/email"
-        android:text="@string/isi_email"
-        android:layout_marginBottom="5dp"
-        style="@style/LayoutWrapContent"
-        app:layout_constraintBottom_toTopOf="@+id/share"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/universitas" />
+        tools:listitem="@layout/item_row_cafe" />
 
     <Button
         android:id="@+id/share"
@@ -84,7 +25,6 @@
         android:layout_marginTop="25dp"
         android:layout_marginBottom="0dp"
         android:onClick="share"
-        app:layout_constraintBottom_toTopOf="@+id/email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="parent"/>

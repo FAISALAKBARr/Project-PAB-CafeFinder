@@ -57,6 +57,20 @@
         </LinearLayout>
     </ScrollView>
 
+    <!-- Button atau ImageButton favorite -->
+    <ImageButton
+        android:id="@+id/btn_favorite"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/favorite"
+        android:src="@drawable/favorite_24dp_fill"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <!-- Back button -->
     <Button
         android:id="@+id/Play"
