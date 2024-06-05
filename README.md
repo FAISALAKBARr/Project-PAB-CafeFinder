@@ -5,8 +5,7 @@
 </div>
 <br>
 
-<br>
-Repo ini merupakan tempat mengerjakan tugas PAB 2024 kelompok 3, dimana setiapa anggota mengerjakan seuai di branchnya masing-masing, lalu dilakukan merege pada main branch.
+<br>Repo ini merupakan tempat mengerjakan tugas PAB 2024 kelompok 03 mengenai Aplikasi Cafe Finder, dimana setiap anggota mengerjakan menggunakan Tools Utama Android Studio, lalu dilakukan commit dan push setelah mengubah source code.
 
 ## Anggota Kelompok
 1. Khansa
