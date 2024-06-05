@@ -2,10 +2,10 @@
 <p align="center"><i>Kelompok 3</i></p>
 <div align="center">
 
-<a href="https://github.com/FAISALAKBARr/Projet-PAB-CafeFinder/network/members"><img src="https://img.shields.io/github/forks/FAISALAKBARr/Projet-PAB-CafeFinder" alt="Forks Badge"/></a>
-<a href="https://github.com/FAISALAKBARr/Projet-PAB-CafeFinder/pulls"><img src="https://img.shields.io/github/issues-pr/SyafiqMSI/Projet-PAB-CafeFinder" alt="Pull Requests Badge"/></a>
-<a href="https://github.com/FAISALAKBARr/Projet-PAB-CafeFinder/issues"><img src="https://img.shields.io/github/issues/FAISALAKBARr/Projet-PAB-CafeFinder" alt="Issues Badge"/></a>
-<a href="https://github.com/FAISALAKBARr/Projet-PAB-CafeFinder/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/FAISALAKBARr/Projet-PAB-CafeFinder?color=2b9348"></a>
+<a href="https://github.com/FAISALAKBARr/Project-PAB-CafeFinder/network/members"><img src="https://img.shields.io/github/forks/FAISALAKBARr/Project-PAB-CafeFinder" alt="Forks Badge"/></a>
+<a href="https://github.com/FAISALAKBARr/Project-PAB-CafeFinder/pulls"><img src="https://img.shields.io/github/issues-pr/SyafiqMSI/Project-PAB-CafeFinder" alt="Pull Requests Badge"/></a>
+<a href="https://github.com/FAISALAKBARr/Project-PAB-CafeFinder/issues"><img src="https://img.shields.io/github/issues/FAISALAKBARr/Project-PAB-CafeFinder" alt="Issues Badge"/></a>
+<a href="https://github.com/FAISALAKBARr/Project-PAB-CafeFinder/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/FAISALAKBARr/Project-PAB-CafeFinder?color=2b9348"></a>
 
 </div>
 <br>
