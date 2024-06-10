@@ -5,7 +5,9 @@ import android.media.MediaPlayer
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Button
 import android.widget.ImageButton
+import android.widget.RatingBar
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import de.hdodenhof.circleimageview.CircleImageView
@@ -15,6 +17,9 @@ class CafeDetailActivity : AppCompatActivity() {
     private var songAudio: Int = -1
     private lateinit var cafe: Cafe
     private lateinit var btnFavorite: ImageButton
+    private lateinit var ratingBarDisplay: RatingBar
+    private lateinit var ratingBarInput: RatingBar
+    private lateinit var btnSubmitRating: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,6 +34,9 @@ class CafeDetailActivity : AppCompatActivity() {
         val tvSongDesc: TextView = findViewById(R.id.tv_song_description)
         val imgPhoto: CircleImageView = findViewById(R.id.img_item_photo)
         btnFavorite = findViewById(R.id.btn_favorite)
+        ratingBarDisplay = findViewById(R.id.ratingBarDisplay)
+        ratingBarInput = findViewById(R.id.ratingBarInput)
+        btnSubmitRating = findViewById(R.id.btnSubmitRating)
 
         tvSongName.text = songName
         tvSongDesc.text = songDesc
@@ -45,7 +53,28 @@ class CafeDetailActivity : AppCompatActivity() {
         btnFavorite.setOnClickListener {
             toggleFavorite()
         }
+        btnSubmitRating.setOnClickListener {
+            submitRating()
+        }
         Log.d("CafeDetailActivity", "songName: $songName, songDesc: $songDesc, songImage: $songImage, songAudio: $songAudio")
+
+        // Display the current rating
+        displayCurrentRating()
+    }
+
+    private fun displayCurrentRating() {
+        // Here, you would fetch the current rating from your data source, for simplicity, let's assume it's 4.0
+        val currentRating = 4.0f
+        ratingBarDisplay.rating = currentRating
+    }
+
+    private fun submitRating() {
+        val newRating = ratingBarInput.rating
+        // Here, you would save the new rating to your data source
+        // For demonstration, we just log it
+        Log.d("CafeDetailActivity", "New rating submitted: $newRating")
+        // Optionally, update the display rating after submission
+        displayCurrentRating()
     }
 
     private fun toggleFavorite() {
