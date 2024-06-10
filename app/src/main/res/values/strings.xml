@@ -19,7 +19,7 @@
     <string name="share_button">SHARE</string>
     <string name="description_app">CAFE FINDER APP</string>
     <string name="description_long_app">Cafe Finder \n Aplikasi ini memungkinkan pengguna untuk mencari kafe terdekat dan memberikan rating serta ulasan tentang kualitas makanan dan layanan di kafe tersebut.</string>
-    <string name="play">Play</string>
+    <string name="rating">Submit Rating</string>
     <string name="sedang_hangat">Top Cafe</string>
     <string name="welcome_back">Welcome back,</string>
     <string name="ready_to">Ready to begin your cafe journey?</string>
