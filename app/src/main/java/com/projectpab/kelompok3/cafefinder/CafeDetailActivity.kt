@@ -8,6 +8,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.RatingBar
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -34,7 +35,7 @@ class CafeDetailActivity : AppCompatActivity() {
 
         val tvSongName: TextView = findViewById(R.id.tv_song_name)
         val tvSongDesc: TextView = findViewById(R.id.tv_song_description)
-        val imgPhoto: CircleImageView = findViewById(R.id.img_item_photo)
+        val imgPhoto: ImageView = findViewById(R.id.img_item_photo)
         btnFavorite = findViewById(R.id.btn_favorite)
         ratingBarDisplay = findViewById(R.id.ratingBarDisplay)
         ratingBarInput = findViewById(R.id.ratingBarInput)
@@ -97,7 +98,7 @@ class CafeDetailActivity : AppCompatActivity() {
         if (FavoriteManager.isFavorite(this, cafe)) {
             btnFavorite.setImageResource(R.drawable.baseline_favorite_red_24) // icon untuk sudah favorite
         } else {
-            btnFavorite.setImageResource(R.drawable.favorite_24dp_fill) // icon untuk belum favorite
+            btnFavorite.setImageResource(R.drawable.favorite_24dp_fill_white) // icon untuk belum favorite
         }
     }
 
