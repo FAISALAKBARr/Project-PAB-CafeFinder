@@ -6,8 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.projectpab.kelompok3.cafefinder.R
-import android.content.Intent
-import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.projectpab.kelompok3.cafefinder.Cafe
 import com.projectpab.kelompok3.cafefinder.FavoriteManager
@@ -36,7 +34,7 @@ class FavoriteFragment : Fragment() {
 
     private fun setupRecyclerView() {
         listCafe = generateFavoriteCafeList()
-        adapter = ListCafeAdapter(listCafe)
+        adapter = ListCafeAdapter(listCafe, requireContext())
         binding.rvFavorite.adapter = adapter
         binding.rvFavorite.layoutManager = LinearLayoutManager(context)
     }
@@ -79,6 +77,9 @@ class FavoriteFragment : Fragment() {
 
         return cafeList
     }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 }
-
-

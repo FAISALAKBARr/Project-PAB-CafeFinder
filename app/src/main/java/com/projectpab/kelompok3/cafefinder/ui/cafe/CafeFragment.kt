@@ -20,31 +20,29 @@ class CafeFragment : Fragment() {
     private val binding get() = _binding!!
     private lateinit var adapter: ListCafeAdapter
     private lateinit var listCafe: ArrayList<Cafe>
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
         _binding = FragmentCafeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         listCafe = generateSongList()
 
-        adapter = ListCafeAdapter(generateSongList())
+        adapter = ListCafeAdapter(listCafe,requireContext())
         binding.rvCafe.adapter = adapter
         binding.rvCafe.layoutManager = LinearLayoutManager(context)
 
         binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
-
                 return false
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
                 filterList(newText)
                 return true
-
             }
         })
 
@@ -62,9 +60,9 @@ class CafeFragment : Fragment() {
     private fun filterList(query: String?) {
         if (query != null) {
             val filteredList = ArrayList<Cafe>()
-            for (Cafe in listCafe) {
-                if (Cafe.name.toLowerCase(Locale.ROOT).contains(query.toLowerCase(Locale.ROOT))) {
-                    filteredList.add(Cafe)
+            for (cafe in listCafe) {
+                if (cafe.name.toLowerCase(Locale.ROOT).contains(query.toLowerCase(Locale.ROOT))) {
+                    filteredList.add(cafe)
                 }
             }
 
@@ -74,7 +72,6 @@ class CafeFragment : Fragment() {
                 adapter.setFilteredList(filteredList)
             }
         }
-
     }
 
     private fun filterByCategory(selectedCategories: List<String>) {

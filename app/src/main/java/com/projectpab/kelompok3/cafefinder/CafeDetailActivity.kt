@@ -1,12 +1,14 @@
 package com.projectpab.kelompok3.cafefinder
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.RatingBar
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -20,6 +22,7 @@ class CafeDetailActivity : AppCompatActivity() {
     private lateinit var ratingBarDisplay: RatingBar
     private lateinit var ratingBarInput: RatingBar
     private lateinit var btnSubmitRating: Button
+    private lateinit var sharedPreferences: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,7 +35,7 @@ class CafeDetailActivity : AppCompatActivity() {
 
         val tvSongName: TextView = findViewById(R.id.tv_song_name)
         val tvSongDesc: TextView = findViewById(R.id.tv_song_description)
-        val imgPhoto: CircleImageView = findViewById(R.id.img_item_photo)
+        val imgPhoto: ImageView = findViewById(R.id.img_item_photo)
         btnFavorite = findViewById(R.id.btn_favorite)
         ratingBarDisplay = findViewById(R.id.ratingBarDisplay)
         ratingBarInput = findViewById(R.id.ratingBarInput)
@@ -47,6 +50,8 @@ class CafeDetailActivity : AppCompatActivity() {
         }
 
         cafe = Cafe(songName!!, songDesc!!, songImage, songAudio, "", "")
+
+        sharedPreferences = getSharedPreferences("CafeFinderPrefs", MODE_PRIVATE)
 
         updateFavoriteIcon()
 
@@ -64,12 +69,15 @@ class CafeDetailActivity : AppCompatActivity() {
 
     private fun displayCurrentRating() {
         // Here, you would fetch the current rating from your data source, for simplicity, let's assume it's 4.0
-        val currentRating = 4.0f
+        val currentRating = sharedPreferences.getFloat(cafe.name, 0f)
         ratingBarDisplay.rating = currentRating
     }
 
     private fun submitRating() {
         val newRating = ratingBarInput.rating
+        val editor = sharedPreferences.edit()
+        editor.putFloat(cafe.name, newRating)
+        editor.apply()
         // Here, you would save the new rating to your data source
         // For demonstration, we just log it
         Log.d("CafeDetailActivity", "New rating submitted: $newRating")
@@ -90,7 +98,7 @@ class CafeDetailActivity : AppCompatActivity() {
         if (FavoriteManager.isFavorite(this, cafe)) {
             btnFavorite.setImageResource(R.drawable.baseline_favorite_red_24) // icon untuk sudah favorite
         } else {
-            btnFavorite.setImageResource(R.drawable.favorite_24dp_fill) // icon untuk belum favorite
+            btnFavorite.setImageResource(R.drawable.favorite_24dp_fill_white) // icon untuk belum favorite
         }
     }
 

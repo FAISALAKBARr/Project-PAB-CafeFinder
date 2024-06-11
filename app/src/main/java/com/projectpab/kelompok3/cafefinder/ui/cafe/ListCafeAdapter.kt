@@ -1,6 +1,8 @@
 package com.projectpab.kelompok3.cafefinder.ui.cafe
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,8 +13,9 @@ import com.projectpab.kelompok3.cafefinder.R
 import com.projectpab.kelompok3.cafefinder.Cafe
 import com.projectpab.kelompok3.cafefinder.CafeDetailActivity
 
-class ListCafeAdapter (private var listCafe: ArrayList<Cafe>) : RecyclerView.Adapter<ListCafeAdapter.ListViewHolder>() {
+class ListCafeAdapter (private var listCafe: ArrayList<Cafe>,private val context: Context) : RecyclerView.Adapter<ListCafeAdapter.ListViewHolder>() {
     private lateinit var onItemClickCallback: OnItemClickCallback
+    private val sharedPreferences: SharedPreferences = context.getSharedPreferences("CafeFinderPrefs", Context.MODE_PRIVATE)
 
     fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
         this.onItemClickCallback = onItemClickCallback
@@ -26,6 +29,11 @@ class ListCafeAdapter (private var listCafe: ArrayList<Cafe>) : RecyclerView.Ada
 
     fun setFilteredList(listCafe: ArrayList<Cafe>){
         this.listCafe = listCafe
+        notifyDataSetChanged()
+    }
+
+    fun sortListByRating() {
+        listCafe.sortByDescending { sharedPreferences.getFloat(it.name, 0f) }
         notifyDataSetChanged()
     }
 
@@ -50,7 +58,6 @@ class ListCafeAdapter (private var listCafe: ArrayList<Cafe>) : RecyclerView.Ada
             }
             holder.itemView.context.startActivity(intent)
         }
-
     }
 
     interface OnItemClickCallback{
