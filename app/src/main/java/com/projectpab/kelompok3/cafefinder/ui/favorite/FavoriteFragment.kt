@@ -34,7 +34,7 @@ class FavoriteFragment : Fragment() {
 
     private fun setupRecyclerView() {
         listCafe = generateFavoriteCafeList()
-        adapter = ListCafeAdapter(listCafe)
+        adapter = ListCafeAdapter(listCafe, requireContext())
         binding.rvFavorite.adapter = adapter
         binding.rvFavorite.layoutManager = LinearLayoutManager(context)
     }
@@ -76,5 +76,10 @@ class FavoriteFragment : Fragment() {
         cafeAudios.recycle()
 
         return cafeList
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

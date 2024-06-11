@@ -1,6 +1,7 @@
 package com.projectpab.kelompok3.cafefinder
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.util.Log
@@ -20,6 +21,7 @@ class CafeDetailActivity : AppCompatActivity() {
     private lateinit var ratingBarDisplay: RatingBar
     private lateinit var ratingBarInput: RatingBar
     private lateinit var btnSubmitRating: Button
+    private lateinit var sharedPreferences: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,6 +50,8 @@ class CafeDetailActivity : AppCompatActivity() {
 
         cafe = Cafe(songName!!, songDesc!!, songImage, songAudio, "", "")
 
+        sharedPreferences = getSharedPreferences("CafeFinderPrefs", MODE_PRIVATE)
+
         updateFavoriteIcon()
 
         btnFavorite.setOnClickListener {
@@ -64,12 +68,15 @@ class CafeDetailActivity : AppCompatActivity() {
 
     private fun displayCurrentRating() {
         // Here, you would fetch the current rating from your data source, for simplicity, let's assume it's 4.0
-        val currentRating = 4.0f
+        val currentRating = sharedPreferences.getFloat(cafe.name, 0f)
         ratingBarDisplay.rating = currentRating
     }
 
     private fun submitRating() {
         val newRating = ratingBarInput.rating
+        val editor = sharedPreferences.edit()
+        editor.putFloat(cafe.name, newRating)
+        editor.apply()
         // Here, you would save the new rating to your data source
         // For demonstration, we just log it
         Log.d("CafeDetailActivity", "New rating submitted: $newRating")
