@@ -40,7 +40,7 @@
         android:label="@string/title_favorite"
         tools:layout="@layout/fragment_favorite" >
         <action
-            android:id="@+id/action_navigation_profile_to_navigation_home"
+            android:id="@+id/action_navigation_favorite_to_navigation_home"
             app:destination="@id/navigation_home" />
     </fragment>
     <activity
