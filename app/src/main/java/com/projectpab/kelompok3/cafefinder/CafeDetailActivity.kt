@@ -31,8 +31,6 @@ class CafeDetailActivity : AppCompatActivity() {
 
         val songName = intent.getStringExtra("SONG_NAME")
         val songDesc = intent.getStringExtra("SONG_DESC")
-        val alamatDesc = intent.getStringExtra("ALAMAT_DESC")
-        val waktuDesc = intent.getStringExtra("WAKTU_DESC")
         val songImage = intent.getIntExtra("SONG_IMG_RES_ID", R.id.img_item_photo)
         val cafePosition = intent.getIntExtra("CAFE_POSITION", -1)
         val cafeMenu = intent.getIntExtra("CAFE_MENU", -1)
