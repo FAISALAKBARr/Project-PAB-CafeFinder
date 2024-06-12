@@ -21,6 +21,7 @@ class CafeDetailActivity : AppCompatActivity() {
     private lateinit var btnSubmitRating: Button
     private lateinit var sharedPreferences: SharedPreferences
     private lateinit var linkAlamat: String
+    private lateinit var linkMenu: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,11 +31,14 @@ class CafeDetailActivity : AppCompatActivity() {
 
         val songName = intent.getStringExtra("SONG_NAME")
         val songDesc = intent.getStringExtra("SONG_DESC")
+        val alamatDesc = intent.getStringExtra("ALAMAT_DESC")
         val songImage = intent.getIntExtra("SONG_IMG_RES_ID", R.id.img_item_photo)
         val cafePosition = intent.getIntExtra("CAFE_POSITION", -1)
+        val cafeMenu = intent.getIntExtra("CAFE_MENU", -1)
 
         val tvSongName: TextView = findViewById(R.id.tv_song_name)
         val tvSongDesc: TextView = findViewById(R.id.tv_song_description)
+        val tvAlamatDesc: TextView = findViewById(R.id.tv_alamat_text)
         val imgPhoto: ImageView = findViewById(R.id.img_item_photo)
         btnFavorite = findViewById(R.id.btn_favorite)
         ratingBarDisplay = findViewById(R.id.ratingBarDisplay)
@@ -45,19 +49,31 @@ class CafeDetailActivity : AppCompatActivity() {
         tvSongDesc.text = songDesc
         imgPhoto.setImageResource(songImage)
 
+        if (cafePosition != -1) {
+            val dataAlamat = resources.getStringArray(R.array.data_alamat)
+            tvAlamatDesc.text = dataAlamat[cafePosition]
+            val dataLinkAlamat = resources.getStringArray(R.array.data_link_alamat)
+            linkAlamat = dataLinkAlamat[cafePosition]
+        }
+
+        if (cafeMenu != -1) {
+            val dataLinkMenu = resources.getStringArray(R.array.data_link_menu)
+            linkMenu = dataLinkMenu[cafeMenu]
+        }
+
         val initialRating = sharedPreferences.getFloat(songName, 0f)
         cafe = Cafe(songName!!, songDesc!!, songImage, "", "", initialRating)
 
         updateFavoriteIcon()
 
-        if (cafePosition != -1) {
-            val dataLinkAlamat = resources.getStringArray(R.array.data_link_alamat)
-            linkAlamat = dataLinkAlamat[cafePosition]
-        }
-
         val btnLocation: ImageButton = findViewById(R.id.btn_location)
         btnLocation.setOnClickListener {
             openLocation(btnLocation)
+        }
+
+        val btnMenu: ImageButton = findViewById(R.id.btn_menu)
+        btnMenu.setOnClickListener {
+            openMenu(btnMenu)
         }
 
         btnFavorite.setOnClickListener {
@@ -66,7 +82,6 @@ class CafeDetailActivity : AppCompatActivity() {
         btnSubmitRating.setOnClickListener {
             submitRating()
         }
-        Log.d("CafeDetailActivity", "songName: $songName, songDesc: $songDesc, songImage: $songImage")
 
         // Display the current rating
         displayCurrentRating()
@@ -75,6 +90,15 @@ class CafeDetailActivity : AppCompatActivity() {
     fun openLocation(view: View) {
         val intent = Intent(Intent.ACTION_VIEW).apply {
             data = Uri.parse(linkAlamat)
+        }
+        if (intent.resolveActivity(packageManager) != null) {
+            startActivity(intent)
+        }
+    }
+
+    fun openMenu(view: View) {
+        val intent = Intent(Intent.ACTION_VIEW).apply {
+            data = Uri.parse(linkMenu)
         }
         if (intent.resolveActivity(packageManager) != null) {
             startActivity(intent)
