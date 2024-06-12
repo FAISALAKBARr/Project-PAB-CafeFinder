@@ -104,7 +104,7 @@
             android:layout_centerVertical="true"
             android:backgroundTint="@color/biru"
             android:contentDescription="@string/menu"
-            android:onClick="openLocation"
+            android:onClick="openMenu"
             android:src="@drawable/baseline_restaurant_menu_24" />
 
         <TextView
