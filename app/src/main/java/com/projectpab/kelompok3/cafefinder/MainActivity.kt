@@ -33,5 +33,13 @@ class MainActivity : AppCompatActivity() {
         if (selectedTab != 0) {
             navView.selectedItemId = selectedTab
         }
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            if (destination.id == R.id.navigation_home) {
+                supportActionBar?.hide()
+            }
+            else {
+                supportActionBar?.show()
+            }
+        }
     }
 }

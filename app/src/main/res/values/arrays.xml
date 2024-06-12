@@ -26,19 +26,6 @@
         <item>@drawable/roc</item>
     </integer-array>
 
-    <integer-array name="data_audio">
-        <item>@raw/love_epiphany</item>
-        <item>@raw/espresso</item>
-        <item>@raw/here_we_go_again</item>
-        <item>@raw/wish_you_were_here</item>
-        <item>@raw/wonderwall</item>
-        <item>@raw/always</item>
-        <item>@raw/glue_song</item>
-        <item>@raw/bruno_mars</item>
-        <item>@raw/mr_loverman</item>
-        <item>@raw/corduroy_dreams</item>
-    </integer-array>
-
     <string-array name="data_cafe">
         <item>Kopi Paseban</item>
         <item>La Luna Coffee and Eatery</item>

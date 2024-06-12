@@ -45,7 +45,7 @@ class ListCafeAdapter (private var listCafe: ArrayList<Cafe>,private val context
     override fun getItemCount(): Int = listCafe.size
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        val (name, desc, img, audio) = listCafe[position]
+        val (name, desc, img) = listCafe[position]
         holder.imgPhoto.setImageResource(img)
         holder.tvName.text = name
         holder.tvDescription.text = desc
@@ -54,7 +54,7 @@ class ListCafeAdapter (private var listCafe: ArrayList<Cafe>,private val context
                 putExtra("SONG_NAME", name)
                 putExtra("SONG_DESC", desc)
                 putExtra("SONG_IMG_RES_ID", img)
-                putExtra("SONG_AUDIO_RES_ID", audio)
+                putExtra("CAFE_POSITION", position)
             }
             holder.itemView.context.startActivity(intent)
         }

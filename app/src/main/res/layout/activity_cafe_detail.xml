@@ -30,6 +30,7 @@
         android:layout_marginEnd="16dp"
         android:gravity="start"
         android:textAlignment="viewStart"
+        android:textColor="@android:color/black"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/ratingBarDisplay"
@@ -48,39 +49,40 @@
         android:scaleX="0.3"
         android:scaleY="0.3"
         android:stepSize="0.5"
+        app:layout_constraintEnd_toEndOf="@+id/tv_song_name"
         app:layout_constraintStart_toStartOf="@+id/tv_song_name"
         app:layout_constraintTop_toBottomOf="@id/tv_song_name" />
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:background="@drawable/rounded_corner"
-        app:layout_constraintStart_toStartOf="@+id/ratingBarDisplay"
-        app:layout_constraintTop_toBottomOf="@+id/ratingBarDisplay"
-        android:layout_marginTop="5dp">
+        app:layout_constraintStart_toStartOf="@+id/tv_song_name"
+        app:layout_constraintTop_toBottomOf="@+id/ratingBarDisplay">
 
         <ImageButton
             android:id="@+id/btn_location"
             android:layout_width="30dp"
             android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
             android:backgroundTint="@color/biru"
             android:contentDescription="@string/location"
-            android:src="@drawable/baseline_location_pin_24"
-            android:layout_centerVertical="true"
-            android:layout_alignParentStart="true" />
+            android:onClick="openLocation"
+            android:src="@drawable/baseline_location_pin_24" />
 
         <TextView
             android:id="@+id/tv_location_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:text="@string/location"
-            android:textSize="12sp"
-            android:textStyle="bold"
-            android:textColor="@android:color/white"
-            android:layout_toEndOf="@id/btn_location"
             android:layout_centerVertical="true"
-             />
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@id/btn_location"
+            android:text="@string/location"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
     </RelativeLayout>
 
     <ScrollView
@@ -151,7 +153,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/rating"
-        android:onClick="playSong"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
