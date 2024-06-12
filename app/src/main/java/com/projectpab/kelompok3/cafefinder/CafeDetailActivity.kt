@@ -2,6 +2,7 @@ package com.projectpab.kelompok3.cafefinder
 
 import android.content.Intent
 import android.content.SharedPreferences
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -11,7 +12,6 @@ import android.widget.ImageView
 import android.widget.RatingBar
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import de.hdodenhof.circleimageview.CircleImageView
 
 class CafeDetailActivity : AppCompatActivity() {
     private lateinit var cafe: Cafe
@@ -20,6 +20,7 @@ class CafeDetailActivity : AppCompatActivity() {
     private lateinit var ratingBarInput: RatingBar
     private lateinit var btnSubmitRating: Button
     private lateinit var sharedPreferences: SharedPreferences
+    private lateinit var linkAlamat: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,6 +31,7 @@ class CafeDetailActivity : AppCompatActivity() {
         val songName = intent.getStringExtra("SONG_NAME")
         val songDesc = intent.getStringExtra("SONG_DESC")
         val songImage = intent.getIntExtra("SONG_IMG_RES_ID", R.id.img_item_photo)
+        val cafePosition = intent.getIntExtra("CAFE_POSITION", -1)
 
         val tvSongName: TextView = findViewById(R.id.tv_song_name)
         val tvSongDesc: TextView = findViewById(R.id.tv_song_description)
@@ -48,6 +50,16 @@ class CafeDetailActivity : AppCompatActivity() {
 
         updateFavoriteIcon()
 
+        if (cafePosition != -1) {
+            val dataLinkAlamat = resources.getStringArray(R.array.data_link_alamat)
+            linkAlamat = dataLinkAlamat[cafePosition]
+        }
+
+        val btnLocation: ImageButton = findViewById(R.id.btn_location)
+        btnLocation.setOnClickListener {
+            openLocation()
+        }
+
         btnFavorite.setOnClickListener {
             toggleFavorite()
         }
@@ -58,6 +70,15 @@ class CafeDetailActivity : AppCompatActivity() {
 
         // Display the current rating
         displayCurrentRating()
+    }
+
+    fun openLocation() {
+        val intent = Intent(Intent.ACTION_VIEW).apply {
+            data = Uri.parse(linkAlamat)
+        }
+        if (intent.resolveActivity(packageManager) != null) {
+            startActivity(intent)
+        }
     }
 
     private fun displayCurrentRating() {

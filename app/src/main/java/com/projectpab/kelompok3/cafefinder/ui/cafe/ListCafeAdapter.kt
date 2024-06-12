@@ -54,6 +54,7 @@ class ListCafeAdapter (private var listCafe: ArrayList<Cafe>,private val context
                 putExtra("SONG_NAME", name)
                 putExtra("SONG_DESC", desc)
                 putExtra("SONG_IMG_RES_ID", img)
+                putExtra("CAFE_POSITION", position)
             }
             holder.itemView.context.startActivity(intent)
         }
