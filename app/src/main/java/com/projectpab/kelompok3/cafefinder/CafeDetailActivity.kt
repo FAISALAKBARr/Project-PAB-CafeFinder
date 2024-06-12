@@ -31,12 +31,14 @@ class CafeDetailActivity : AppCompatActivity() {
 
         val songName = intent.getStringExtra("SONG_NAME")
         val songDesc = intent.getStringExtra("SONG_DESC")
+        val alamatDesc = intent.getStringExtra("ALAMAT_DESC")
         val songImage = intent.getIntExtra("SONG_IMG_RES_ID", R.id.img_item_photo)
         val cafePosition = intent.getIntExtra("CAFE_POSITION", -1)
         val cafeMenu = intent.getIntExtra("CAFE_MENU", -1)
 
         val tvSongName: TextView = findViewById(R.id.tv_song_name)
         val tvSongDesc: TextView = findViewById(R.id.tv_song_description)
+        val tvAlamatDesc: TextView = findViewById(R.id.tv_alamat_text)
         val imgPhoto: ImageView = findViewById(R.id.img_item_photo)
         btnFavorite = findViewById(R.id.btn_favorite)
         ratingBarDisplay = findViewById(R.id.ratingBarDisplay)
@@ -47,12 +49,9 @@ class CafeDetailActivity : AppCompatActivity() {
         tvSongDesc.text = songDesc
         imgPhoto.setImageResource(songImage)
 
-        val initialRating = sharedPreferences.getFloat(songName, 0f)
-        cafe = Cafe(songName!!, songDesc!!, songImage, "", "", initialRating)
-
-        updateFavoriteIcon()
-
         if (cafePosition != -1) {
+            val dataAlamat = resources.getStringArray(R.array.data_alamat)
+            tvAlamatDesc.text = dataAlamat[cafePosition]
             val dataLinkAlamat = resources.getStringArray(R.array.data_link_alamat)
             linkAlamat = dataLinkAlamat[cafePosition]
         }
@@ -61,6 +60,11 @@ class CafeDetailActivity : AppCompatActivity() {
             val dataLinkMenu = resources.getStringArray(R.array.data_link_menu)
             linkMenu = dataLinkMenu[cafeMenu]
         }
+
+        val initialRating = sharedPreferences.getFloat(songName, 0f)
+        cafe = Cafe(songName!!, songDesc!!, songImage, "", "", initialRating)
+
+        updateFavoriteIcon()
 
         val btnLocation: ImageButton = findViewById(R.id.btn_location)
         btnLocation.setOnClickListener {
@@ -78,7 +82,6 @@ class CafeDetailActivity : AppCompatActivity() {
         btnSubmitRating.setOnClickListener {
             submitRating()
         }
-        Log.d("CafeDetailActivity", "songName: $songName, songDesc: $songDesc, songImage: $songImage")
 
         // Display the current rating
         displayCurrentRating()
