@@ -215,4 +215,27 @@
         <item>https://maps.app.goo.gl/anDoa9bvSLaQ6oHQ6?g_st=ac</item>
         <item>https://maps.app.goo.gl/BAXXvVDb9Ptw8Zsj9?g_st=ac</item>
     </string-array>
+
+    <string-array name="data_jam">
+        <item><![CDATA[Senin: 09.00–22.00 \nSelasa: 09.00–22.00 \nRabu: 09.00–22.00 \nKamis: 09.00–22.00 \nJumat: 09.00–22.00 \nSabtu: 13.00–22.00(Jam buka di hari libur) \nMinggu: 13.00–22.00(Jam buka di hari libur)]]></item>
+        <item><![CDATA[Senin: 10.00–00.00 \nSelasa: 10.00–00.00 \nRabu: 10.00–00.00 \nKamis: 10.00–00.00 \nJumat: 10.00–00.00 \nSabtu: 10.00–00.00 \nMinggu: 10.00–00.00]]></item>
+        <item><![CDATA[Senin: 08.00–00.00 \nSelasa: 08.00–00.00 \nRabu: 08.00–00.00 \nKamis: 08.00–00.00 \nJumat: 08.00–00.00 \nSabtu: 08.00–00.00 \nMinggu: 08.00–00.00]]></item>
+        <item><![CDATA[Senin: 10.00–23.30 \nSelasa: 10.00–23.30 \nRabu: 10.00–23.30 \nKamis: 10.00–23.30 \nJumat: 10.00–23.30 \nSabtu: 10.00–23.30 \nMinggu: 10.00–23.30]]></item>
+        <item><![CDATA[Senin: 09.00–22.00 \nSelasa: 09.00–22.00 \nRabu: 09.00–22.00 \nKamis: 09.00–22.00 \nJumat: 09.00–22.00 \nSabtu: 09.00–22.00 \nMinggu: 09.00–22.00]]></item>
+        <item><![CDATA[Senin: 07.00–23.00 \nSelasa: 07.00–23.00 \nRabu: 07.00–23.00 \nKamis: 07.00–23.00 \nJumat: 07.00–23.00 \nSabtu: 07.00–23.00 \nMinggu: 07.00–23.00]]></item>
+        <item><![CDATA[Senin: 09.00–22.00 \nSelasa: 09.00–22.00 \nRabu: 09.00–22.00 \nKamis:09.00–22.00 \nJumat: 09.00–22.00 \nSabtu: 09.00–22.00 \nMinggu: 09.00–22.00]]></item>
+        <item><![CDATA[Senin: Tutup \nSelasa: 17.00–00.00 \nRabu: 17.00–00.00 \nKamis: 17.00–00.00 \nJumat: 17.00–00.00 \nSabtu: 17.00–00.00 \nMinggu: 17.00–00.00]]></item>
+        <item><![CDATA[Senin: 07.00–23.00 \nSelasa: 07.00–23.00 \nRabu: 07.00–23.00 \nKamis: 07.00–23.00 \nJumat: 07.00–23.00 \nSabtu: 07.00–23.00 \nMinggu: 07.00–23.00]]></item>
+        <item><![CDATA[Senin: 15.00–23.00 \nSelasa: 15.00–23.00 \nRabu: 15.00–23.00 \nKamis: 15.00–23.00 \nJumat: 15.00–23.00 \nSabtu: 15.00–23.00 \nMinggu: Tutup]]></item>
+        <item><![CDATA[Senin: 10.00–01.00 \nSelasa: 10.00–01.00 \nRabu: 10.00–01.00 \nKamis: 10.00–01.00 \nJumat: 10.00–01.00 \nSabtu: 10.00–01.00 \nMinggu: 10.00–01.00]]></item>
+        <item><![CDATA[Senin: Buka 24 jam \nSelasa: Buka 24 jam \nRabu: Buka 24 jam \nKamis: Buka 24 jam \nJumat: Buka 24 jam \nSabtu: Buka 24 jam \nMinggu: Buka 24 jam]]></item>
+        <item><![CDATA[Senin: 15.00–23.00 \nSelasa: 15.00–23.00 \nRabu: 15.00–23.00 \nKamis: 15.00–23.00 \nJumat: 15.00–23.00 \nSabtu: 15.00–23.00 \nMinggu: 15.00–23.00]]></item>
+        <item><![CDATA[Senin: 10.00–01.00 \nSelasa: 10.00–01.00 \nRabu: 10.00–01.00 \nKamis: 10.00–01.00 \nJumat: 10.00–01.00 \nSabtu: 10.00–01.00 \nMinggu: 10.00–01.00]]></item>
+        <item><![CDATA[Senin: 08.00–00.00 \nSelasa: 08.00–00.00 \nRabu: 08.00–00.00 \nKamis: 08.00–00.00 \nJumat: 08.00–00.00 \nSabtu: 08.00–00.00 \nMinggu: 08.00–00.00]]></item>
+        <item><![CDATA[Senin: 08.00–22.00 \nSelasa: 08.00–22.00 \nRabu: 08.00–22.00 \nKamis: 08.00–22.00 \nJumat: 08.00–22.00 \nSabtu: 08.00–22.00 \nMinggu: 08.00–22.00]]></item>
+        <item><![CDATA[Senin: 10.00–23.00 \nSelasa: 10.00–23.00 \nRabu: 10.00–23.00 \nKamis: 10.00–23.00 \nJumat: 10.00–23.00 \nSabtu: 10.00–23.00 \nMinggu: 10.00–23.00]]></item>
+        <item><![CDATA[Senin: 08.00–00.00 \nSelasa: 08.00–00.00 \nRabu: 08.00–00.00 \nKamis: 08.00–00.00 \nJumat: 08.00–00.00 \nSabtu: 08.00–00.00 \nMinggu: 08.00–00.00]]></item>
+        <item><![CDATA[Senin: 10.00–23.00 \nSelasa: 10.00–23.00 \nRabu: 10.00–23.00 \nKamis: 10.00–23.00 \nJumat: 10.00–23.00 \nSabtu: 10.00–23.00 \nMinggu: 10.00–23.00]]></item>
+        <item><![CDATA[Senin: 13.00–00.00 \nSelasa: 13.00–00.00 \nRabu: 13.00–00.00 \nKamis: 13.00–00.00 \nJumat: 13.00–00.00 \nSabtu: 13.00–00.00 \nMinggu: 13.00–00.00]]></item>
+    </string-array>
 </resources>
