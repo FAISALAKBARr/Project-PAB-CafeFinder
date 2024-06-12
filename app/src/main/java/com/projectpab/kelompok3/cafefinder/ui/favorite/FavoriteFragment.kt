@@ -30,6 +30,7 @@ class FavoriteFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupRecyclerView()
+        updateFavoriteCount()
     }
 
     private fun setupRecyclerView() {
@@ -37,6 +38,15 @@ class FavoriteFragment : Fragment() {
         adapter = ListCafeAdapter(listCafe, requireContext())
         binding.rvFavorite.adapter = adapter
         binding.rvFavorite.layoutManager = LinearLayoutManager(context)
+    }
+
+    private fun updateFavoriteCount() {
+        val favoriteCount = FavoriteManager.getFavoriteCount(requireContext())
+        val dispFavCount = binding.cafeFavoriteCount
+        val oldcount = dispFavCount.text.toString()
+
+        val newcount = oldcount.replace(Regex("^\\d+"), favoriteCount.toString())
+        dispFavCount.text = newcount
     }
 
     private fun generateFavoriteCafeList(): ArrayList<Cafe> {
