@@ -57,7 +57,7 @@ class CafeDetailActivity : AppCompatActivity() {
 
         val btnLocation: ImageButton = findViewById(R.id.btn_location)
         btnLocation.setOnClickListener {
-            openLocation()
+            openLocation(btnLocation)
         }
 
         btnFavorite.setOnClickListener {
@@ -72,7 +72,7 @@ class CafeDetailActivity : AppCompatActivity() {
         displayCurrentRating()
     }
 
-    fun openLocation() {
+    fun openLocation(view: View) {
         val intent = Intent(Intent.ACTION_VIEW).apply {
             data = Uri.parse(linkAlamat)
         }
