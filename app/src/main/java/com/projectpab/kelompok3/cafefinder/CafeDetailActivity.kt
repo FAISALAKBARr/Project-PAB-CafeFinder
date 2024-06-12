@@ -95,7 +95,7 @@ class CafeDetailActivity : AppCompatActivity() {
         // Here, you would save the new rating to your data source
         // For demonstration, we just log it
         Log.d("CafeDetailActivity", "New rating submitted: $newRating")
-        // Optionally, update the display rating after submission
+        //update the display rating after submission
         displayCurrentRating()
     }
 
