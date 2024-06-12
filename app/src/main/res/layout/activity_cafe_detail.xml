@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/Beige"
     tools:context=".CafeDetailActivity">
 
     <!-- ImageView placed outside the ScrollView -->
@@ -24,7 +25,6 @@
     <TextView
         android:id="@+id/tv_song_name"
         style="@style/LayoutMatchWrap"
-        android:layout_gravity="center"
         android:layout_marginTop="5dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
@@ -68,7 +68,7 @@
             android:layout_height="40dp"
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
-            android:backgroundTint="@color/biru"
+            android:backgroundTint="@color/Navy_light"
             android:contentDescription="@string/location"
             android:onClick="openLocation"
             android:src="@drawable/baseline_location_pin_24" />
@@ -102,9 +102,9 @@
             android:layout_height="40dp"
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
-            android:backgroundTint="@color/biru"
+            android:backgroundTint="@color/Navy_light"
             android:contentDescription="@string/menu"
-            android:onClick="openLocation"
+            android:onClick="openMenu"
             android:src="@drawable/baseline_restaurant_menu_24" />
 
         <TextView
@@ -139,8 +139,52 @@
                 android:layout_gravity="center"
                 android:layout_margin="16dp"
                 android:justificationMode="inter_word"
-                android:textSize="16sp"
-                android:textStyle="italic" />
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/iv_image"
+                android:layout_width="30dp"
+                android:layout_gravity="start"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="0dp"
+                android:contentDescription="@string/location"
+                android:src="@drawable/baseline_location_on_24_biru"/>
+
+            <TextView
+                android:id="@+id/tv_alamat_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="20dp"
+                android:layout_gravity="start"
+                android:gravity="start"
+                android:textAlignment="viewStart"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"/>
+
+            <ImageView
+                android:id="@+id/waktu_image"
+                android:layout_width="30dp"
+                android:layout_gravity="start"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:contentDescription="@string/location"
+                android:src="@drawable/baseline_access_time_24_biru"/>
+
+            <TextView
+                android:id="@+id/tv_waktu_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="20dp"
+                android:layout_gravity="start"
+                android:gravity="start"
+                android:textAlignment="viewStart"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"/>
 
             <Button
                 android:id="@+id/back_button"
@@ -151,6 +195,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent" />
+
         </LinearLayout>
     </ScrollView>
 

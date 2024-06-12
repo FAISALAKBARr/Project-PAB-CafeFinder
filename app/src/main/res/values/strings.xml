@@ -26,7 +26,7 @@
     <string name="your_cafe_count">Your Cafe Count</string>
     <string name="favorite_cafe">Favorite Cafe</string>
     <string name="favorite">favorite</string>
-    <string name="location">Loc</string>
+    <string name="location">Location</string>
     <string name="favorite_button_location">Lihat Lokasi</string>
     <string name="favorite_button_cafe">Lihat Cafe</string>
     <string name="favorite_button_delete">Delete</string>
