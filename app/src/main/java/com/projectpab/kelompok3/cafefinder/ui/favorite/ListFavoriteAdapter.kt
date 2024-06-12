@@ -32,6 +32,7 @@ class ListFavoriteAdapter(private val listFavorite: ArrayList<Cafe>, private val
     inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val favoriteImage: ImageView = itemView.findViewById(R.id.favoriteImg)
         val cafeName: TextView = itemView.findViewById(R.id.cafeName)
+        val ratingCafe: TextView = itemView.findViewById(R.id.ratingCafe)
         val deleteButton: Button = itemView.findViewById(R.id.deleteButton)
         val gotoCafeButton: Button = itemView.findViewById(R.id.cafeButton)
         val locationCafeButton: Button = itemView.findViewById(R.id.locationButton)
@@ -67,9 +68,10 @@ class ListFavoriteAdapter(private val listFavorite: ArrayList<Cafe>, private val
     override fun getItemCount(): Int = listFavorite.size
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        val (name, desc, img) = listFavorite[position]
+        val (name, desc, img, category, recommendation, rating) = listFavorite[position]
         holder.cafeName.text = if (name.length > 12) name.substring(0, 12) + "..." else name
         holder.favoriteImage.setImageResource(img)
+        holder.ratingCafe.text = rating.toString()
         holder.gotoCafeButton.setOnClickListener {
             val intent = Intent(holder.itemView.context, CafeDetailActivity::class.java).apply {
                 putExtra("SONG_NAME", name)

@@ -122,7 +122,7 @@
             android:importantForAccessibility="no"
             app:layout_constraintBottom_toBottomOf="@+id/favoriteImg"
             app:layout_constraintEnd_toEndOf="@+id/transparencyShape"
-            app:layout_constraintHorizontal_bias="0.882"
+            app:layout_constraintHorizontal_bias="0.82"
             app:layout_constraintStart_toStartOf="@+id/transparencyShape"
             app:layout_constraintTop_toTopOf="@+id/transparencyShape"
             app:layout_constraintVertical_bias="0.59"

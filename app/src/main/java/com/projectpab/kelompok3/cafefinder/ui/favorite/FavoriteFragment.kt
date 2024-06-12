@@ -2,6 +2,7 @@ package com.projectpab.kelompok3.cafefinder.ui.favorite
 
 import android.annotation.SuppressLint
 import android.app.AlertDialog
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -32,6 +33,12 @@ class FavoriteFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setupRecyclerView()
         updateFavoriteCount()
+        updateCafeRatings()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        updateCafeRatings()
     }
 
     private fun setupRecyclerView() {
@@ -55,6 +62,16 @@ class FavoriteFragment : Fragment() {
 
         val newcount = oldcount.replace(Regex("^\\d+"), favoriteCount.toString())
         dispFavCount.text = newcount
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    private fun updateCafeRatings() {
+        val sharedPreferences = requireContext().getSharedPreferences("CafeFinderPrefs", Context.MODE_PRIVATE)
+        for (cafe in listCafe) {
+            val rating = sharedPreferences.getFloat(cafe.name, 0f)
+            cafe.rating = rating
+        }
+        adapter.notifyDataSetChanged()
     }
 
     @SuppressLint("NotifyDataSetChanged")
@@ -98,16 +115,18 @@ class FavoriteFragment : Fragment() {
         val cafeImages = resources.obtainTypedArray(R.array.data_img_cafe)
         val category = resources.getStringArray(R.array.data_cash)
         val recommended = resources.getStringArray(R.array.data_recommended)
+        val sharedPreferences = requireContext().getSharedPreferences("CafeFinderPrefs", Context.MODE_PRIVATE)
 
         val cafeList = ArrayList<Cafe>()
         for (i in cafeNames.indices) {
+            val rating = sharedPreferences.getFloat(cafeNames[i], 0f)
             val cafe = Cafe(
                 cafeNames[i],
                 cafeDescriptions[i],
                 cafeImages.getResourceId(i, -1),
                 category[i],
                 recommended[i],
-                0f, // Default rating, it will be updated later
+                rating,
             )
             cafeList.add(cafe)
         }
