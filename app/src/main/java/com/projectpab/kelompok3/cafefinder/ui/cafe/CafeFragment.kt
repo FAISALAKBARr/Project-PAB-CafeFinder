@@ -147,7 +147,6 @@ class CafeFragment : Fragment() {
         val cafeNames = resources.getStringArray(R.array.data_cafe)
         val cafeDescriptions = resources.getStringArray(R.array.data_desc_cafe)
         val cafeImages = resources.obtainTypedArray(R.array.data_img_cafe)
-        val cafeAudios = resources.obtainTypedArray(R.array.data_audio)
         val categories = resources.getStringArray(R.array.data_cash)
         val recommended = resources.getStringArray(R.array.data_recommended)
 
@@ -157,7 +156,6 @@ class CafeFragment : Fragment() {
                 cafeNames[i],
                 cafeDescriptions[i],
                 cafeImages.getResourceId(i, -1),
-                cafeAudios.getResourceId(i, -1),
                 categories[i],
                 recommended[i],
                 0f, // Default rating, it will be updated later
@@ -165,7 +163,6 @@ class CafeFragment : Fragment() {
             cafeList.add(cafe)
         }
         cafeImages.recycle()
-        cafeAudios.recycle()
 
         return cafeList
     }
