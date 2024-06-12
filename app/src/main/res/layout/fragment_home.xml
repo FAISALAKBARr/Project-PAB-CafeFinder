@@ -27,7 +27,7 @@
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/cafe_illustration"
             android:layout_width="match_parent"
-            android:layout_height="210dp"
+            android:layout_height="205dp"
             android:scaleType="centerCrop"
             android:src="@drawable/cafe_illustration_home"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -95,7 +95,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@id/card_view"
-                app:layout_constraintBottom_toTopOf="@id/substitute"
+                app:layout_constraintBottom_toBottomOf="@id/daily_recommendations_desc"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent">
 
@@ -103,12 +103,12 @@
                     android:id="@+id/fav_icon"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
+                    android:layout_marginStart="25dp"
                     android:src="@drawable/baseline_favorite_red_24"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@id/favCount"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:layout_marginStart="25dp"/>
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                 android:id="@+id/favCount"
@@ -142,13 +142,41 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
-        android:id="@+id/substitute"
+        android:id="@+id/daily_recommendations_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="nanti elemen lain di sini"
         app:layout_constraintTop_toBottomOf="@id/layout_favorite_count"
+        app:layout_constraintBottom_toTopOf="@id/daily_recommendations_desc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/todays_recommendations"
+        android:textColor="@color/Navy"
+        android:textSize="24sp"
+        android:letterSpacing="0.05"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/daily_recommendations_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/daily_recommendations_title"
+        app:layout_constraintBottom_toTopOf="@id/recycle_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/todays_recommendations_desc"
+        android:textColor="@color/Beige_dark"
+        android:textSize="13sp"
+        android:letterSpacing="0.05"
+        android:textStyle="italic"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="15dp"
+        app:layout_constraintTop_toBottomOf="@id/daily_recommendations_desc"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-    </TextView>
+        app:layout_constraintEnd_toEndOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
