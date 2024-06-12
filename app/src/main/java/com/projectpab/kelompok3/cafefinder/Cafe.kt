@@ -6,5 +6,6 @@ data class Cafe(
     val imageId: Int,
     val audioId: Int,
     val category: String,
-    val recommendation: String
+    val recommendation: String,
+    var rating: Float
 )

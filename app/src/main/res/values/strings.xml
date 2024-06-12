@@ -26,4 +26,5 @@
     <string name="your_cafe_count">Your Cafe Count</string>
     <string name="favorite_cafe">Favorite Cafe</string>
     <string name="favorite">favorite</string>
+    <string name="location">Loc</string>
 </resources>

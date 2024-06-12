@@ -159,4 +159,73 @@
         <item>@drawable/jeeva</item>
         <item>@drawable/kumpeni</item>
     </integer-array>
+
+    <string-array name="data_alamat">
+        <item><![CDATA[Depan Rektorat ISI Surakarta, Jl. Petir, Jebres, Kec. Jebres, Kota Surakarta, Jawa Tengah 57126]]></item>
+        <item><![CDATA[Jl. Ir. Sutami No.64, Jebres, Kec. Jebres, Kota Surakarta, Jawa Tengah 57125]]></item>
+        <item><![CDATA[Jl. Ir. Sutami No.32, Jebres, Kec. Jebres, Kota Surakarta, Jawa Tengah 57126]]></item>
+        <item><![CDATA[Jl. Ir. Sutami No.21, Jebres, Kec. Jebres, Kota Surakarta, Jawa Tengah 57126]]></item>
+        <item><![CDATA[Jl. Kolonel Sutarto No.159, Jebres, Kec. Jebres, Kota Surakarta, Jawa Tengah 57126]]></item>
+        <item><![CDATA[Jl. Suryo No.117A, Jagalan, Kec. Jebres, Kota Surakarta, Jawa Tengah 57124]]></item>
+        <item><![CDATA[Jl. Ki Hajar Dewantara No.49, Jebres, Kec. Jebres, Kota Surakarta, Jawa Tengah 57126]]></item>
+        <item><![CDATA[Jl. Ledoksari No.1, Purwodiningratan, Kec. Jebres, Kota Surakarta, Jawa Tengah 57128]]></item>
+        <item><![CDATA[Jl. Ir. Sutami No.104, Pucangsawit, Kec. Jebres, Kota Surakarta, Jawa Tengah 57125]]></item>
+        <item><![CDATA[Jl. Sungai Sebakung No.18, Kedung Lumbu, Kec. Ps. Kliwon, Kota Surakarta, Jawa Tengah 57199]]></item>
+        <item><![CDATA[Jl. Abu Bakar Ali No.24-26, Kotabaru, Kec. Gondokusuman, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55224]]></item>
+        <item><![CDATA[Jl. Suroto, Kotabaru, Kec. Gondokusuman, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55224]]></item>
+        <item><![CDATA[59X3+RHV, Jl. Prof. DR. Ki Amri Yahya No.2, Pakuncen, Wirobrajan, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55253]]></item>
+        <item><![CDATA[Depok, Kledokan, Caturtunggal, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281]]></item>
+        <item><![CDATA[Jl. Babaran, Warungboto, Kec. Umbulharjo, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55161]]></item>
+        <item><![CDATA[Jl. Jend. Sudirman No.3, Cokrodiningratan, Kec. Jetis, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55233]]></item>
+        <item><![CDATA[Pendopo Ndalem Pujokusuman, Jl. Brigjen Katamso, Keparakan, Mergangsan, Yogyakarta City, Special Region of Yogyakarta 55152]]></item>
+        <item><![CDATA[Jl. Kranggan No.30, Cokrodiningratan, Kec. Jetis, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55233]]></item>
+        <item><![CDATA[Jl. Suhartono No.2, Kotabaru, Kec. Gondokusuman, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55224]]></item>
+        <item><![CDATA[Jl. Nyai Ahmad Dahlan No.32, Notoprajan, Ngampilan, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55262]]></item>
+    </string-array>
+
+    <string-array name="data_link_alamat">
+        <item>https://maps.app.goo.gl/gR295sjChK8ZE2cCA</item>
+        <item>https://maps.app.goo.gl/6mgrG39UrmPXv8Tv8</item>
+        <item>https://maps.app.goo.gl/Q9Z6WGKLQuv3GfkK8</item>
+        <item>https://maps.app.goo.gl/iVXq4jaH4EX8hFpN7</item>
+        <item>https://maps.app.goo.gl/63z3Pugw2mG94uS6A</item>
+        <item>https://maps.app.goo.gl/b8e8qCp1hYf3azgj9</item>
+        <item>https://maps.app.goo.gl/78yiCxssuSWmW5MV9</item>
+        <item>https://maps.app.goo.gl/Cxir1gz1jWDD1syj8</item>
+        <item>https://maps.app.goo.gl/cJHH8yXMGHPgBtBB6</item>
+        <item>https://maps.app.goo.gl/md5svJxHaKwVommo7</item>
+        <item>https://maps.app.goo.gl/duboDnF4BSXRghLM7</item>
+        <item>https://maps.app.goo.gl/eEoxwDwSxaZmXC4b6</item>
+        <item>https://maps.app.goo.gl/bRUhsHK6p5XGTMqW6</item>
+        <item>https://maps.app.goo.gl/kwJGWkHeitxE6AeT7</item>
+        <item>https://maps.app.goo.gl/XQNUensNdB479dh9A</item>
+        <item>https://maps.app.goo.gl/Cqu3bAwD5WAAERc67</item>
+        <item>https://maps.app.goo.gl/Pfqcky7CYNpL14Zb9</item>
+        <item>https://maps.app.goo.gl/EtGHqzMBShakb75S9</item>
+        <item>https://maps.app.goo.gl/7kHYv8oAA6AoMKJP9</item>
+        <item>https://maps.app.goo.gl/cVrsuq4vXKdeXnU76</item>
+    </string-array>
+
+    <string-array name="data_link_menu">
+        <item>https://maps.app.goo.gl/g7u9v2Wp4WuYtF5J7?g_st=ac</item>
+        <item>https://maps.app.goo.gl/2Wo6AAs9zVh6FqS58?g_st=ac</item>
+        <item>https://maps.app.goo.gl/8wYCRpAbxJevFdhA8?g_st=ac</item>
+        <item>https://maps.app.goo.gl/LKzi53zYkv3VMuTg6?g_st=ac</item>
+        <item>https://maps.app.goo.gl/Hb48ic8NjkqHKGku5?g_st=ac</item>
+        <item>https://maps.app.goo.gl/RjcgaJ4g1LEWUZvz6?g_st=ac</item>
+        <item>https://maps.app.goo.gl/REte4SxpwERNHagQ6?g_st=ac</item>
+        <item>https://maps.app.goo.gl/bNfAeSJeVVAeASNAA?g_st=ac</item>
+        <item>https://maps.app.goo.gl/NV7LQfpB9nXDCnGe9?g_st=ac</item>
+        <item>https://maps.app.goo.gl/xQgLeBQ7pumDFVau6?g_st=ac</item>
+        <item>https://maps.app.goo.gl/1oemjXZCa9YnD3qz9?g_st=ac</item>
+        <item>https://maps.app.goo.gl/nzaD2mKjsnfCMbJRA?g_st=ac</item>
+        <item>https://maps.app.goo.gl/82ntCn657pHMsA5dA?g_st=ac</item>
+        <item>https://maps.app.goo.gl/E4muiQySDZNnq4Kt8?g_st=ac</item>
+        <item>https://maps.app.goo.gl/SqyTeiMdDHMWJnG99?g_st=ac</item>
+        <item>https://maps.app.goo.gl/RvJfLfdS5227mPmT8?g_st=ac</item>
+        <item>https://maps.app.goo.gl/4e4oUUXRnYjbBiiR8?g_st=ac</item>
+        <item>https://maps.app.goo.gl/fNNWdc3bCSVc6SWWA?g_st=ac</item>
+        <item>https://maps.app.goo.gl/anDoa9bvSLaQ6oHQ6?g_st=ac</item>
+        <item>https://maps.app.goo.gl/BAXXvVDb9Ptw8Zsj9?g_st=ac</item>
+    </string-array>
 </resources>
