@@ -216,7 +216,7 @@
         <item>https://maps.app.goo.gl/BAXXvVDb9Ptw8Zsj9?g_st=ac</item>
     </string-array>
 
-    <string-array name="data_jam">
+    <string-array name="data_waktu">
         <item><![CDATA[Senin: 09.00–22.00 \nSelasa: 09.00–22.00 \nRabu: 09.00–22.00 \nKamis: 09.00–22.00 \nJumat: 09.00–22.00 \nSabtu: 13.00–22.00(Jam buka di hari libur) \nMinggu: 13.00–22.00(Jam buka di hari libur)]]></item>
         <item><![CDATA[Senin: 10.00–00.00 \nSelasa: 10.00–00.00 \nRabu: 10.00–00.00 \nKamis: 10.00–00.00 \nJumat: 10.00–00.00 \nSabtu: 10.00–00.00 \nMinggu: 10.00–00.00]]></item>
         <item><![CDATA[Senin: 08.00–00.00 \nSelasa: 08.00–00.00 \nRabu: 08.00–00.00 \nKamis: 08.00–00.00 \nJumat: 08.00–00.00 \nSabtu: 08.00–00.00 \nMinggu: 08.00–00.00]]></item>
