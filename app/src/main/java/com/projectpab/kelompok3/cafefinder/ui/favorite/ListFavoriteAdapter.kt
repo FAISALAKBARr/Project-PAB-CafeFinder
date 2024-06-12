@@ -80,5 +80,13 @@ class ListFavoriteAdapter(private val listFavorite: ArrayList<Cafe>, private val
             }
             holder.itemView.context.startActivity(intent)
         }
+        holder.favoriteImage.setOnClickListener {
+            val intent = Intent(holder.itemView.context, CafeDetailActivity::class.java).apply {
+                putExtra("SONG_NAME", name)
+                putExtra("SONG_DESC", desc)
+                putExtra("SONG_IMG_RES_ID", img)
+            }
+            holder.itemView.context.startActivity(intent)
+        }
     }
 }

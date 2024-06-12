@@ -108,9 +108,24 @@ class CafeDetailActivity : AppCompatActivity() {
     }
 
     private fun displayCurrentRating() {
-        // Here, you would fetch the current rating from your data source, for simplicity, let's assume it's 4.0
-        val currentRating = sharedPreferences.getFloat(cafe.name, 0f)
-        ratingBarDisplay.rating = currentRating
+        val defaultRating = 4.0f // Default rating when none is set
+
+        // Check if a rating exists in SharedPreferences
+        val storedRating = sharedPreferences.getFloat(cafe.name, defaultRating)
+
+        if (storedRating == defaultRating) {
+            // Generate a random initial rating if none exists
+            val randomRating = (1..5).random().toFloat() // Generate random rating between 1 and 5
+            ratingBarDisplay.rating = randomRating
+
+            // Save the random rating to SharedPreferences
+            val editor = sharedPreferences.edit()
+            editor.putFloat(cafe.name, randomRating)
+            editor.apply()
+        } else {
+            // Display the stored rating
+            ratingBarDisplay.rating = storedRating
+        }
     }
 
     private fun submitRating() {
