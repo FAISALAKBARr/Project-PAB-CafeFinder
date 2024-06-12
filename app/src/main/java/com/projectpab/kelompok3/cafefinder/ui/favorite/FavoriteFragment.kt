@@ -78,7 +78,8 @@ class FavoriteFragment : Fragment() {
                 cafeImages.getResourceId(i, -1),
                 cafeAudios.getResourceId(i, -1),
                 category[i],
-                recommended[i]
+                recommended[i],
+                0f, // Default rating, it will be updated later
             )
             cafeList.add(cafe)
         }

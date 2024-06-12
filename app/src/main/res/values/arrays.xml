@@ -228,4 +228,32 @@
         <item>https://maps.app.goo.gl/anDoa9bvSLaQ6oHQ6?g_st=ac</item>
         <item>https://maps.app.goo.gl/BAXXvVDb9Ptw8Zsj9?g_st=ac</item>
     </string-array>
+
+    <string-array name="data_rating">
+        <item><![CDATA[4.0]]></item>
+        <item><![CDATA[4.0]]></item>
+        <item><![CDATA[4.0]]></item>
+        <item><![CDATA[4.0]]></item>
+        <item><![CDATA[4.0]]></item>
+        <item><![CDATA[4.0]]></item>
+        <item><![CDATA[4.0]]></item>
+        <item><![CDATA[4.0]]></item>
+        <item><![CDATA[4.0]]></item>
+        <item><![CDATA[4.0]]></item>
+        <item><![CDATA[4.0]]></item>
+        <item><![CDATA[4.0]]></item>
+        <item><![CDATA[4.0]]></item>
+        <item><![CDATA[4.0]]></item>
+        <item><![CDATA[4.0]]></item>
+        <item><![CDATA[4.0]]></item>
+        <item><![CDATA[4.0]]></item>
+        <item><![CDATA[4.0]]></item>
+        <item><![CDATA[4.0]]></item>
+        <item><![CDATA[4.0]]></item>
+        <item><![CDATA[4.0]]></item>
+        <item><![CDATA[4.0]]></item>
+        <item><![CDATA[4.0]]></item>
+        <item><![CDATA[4.0]]></item>
+        <item><![CDATA[4.0]]></item>
+    </string-array>
 </resources>

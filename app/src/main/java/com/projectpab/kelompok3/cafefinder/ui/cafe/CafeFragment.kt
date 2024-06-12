@@ -1,12 +1,12 @@
 package com.projectpab.kelompok3.cafefinder.ui.cafe
 
 import android.app.AlertDialog
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.*
 import android.widget.Toast
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.GridLayoutManager
 import com.projectpab.kelompok3.cafefinder.R
@@ -19,6 +19,7 @@ class CafeFragment : Fragment() {
     private var _binding: FragmentCafeBinding? = null
     private val binding get() = _binding!!
     private lateinit var adapter: ListCafeAdapter
+    private lateinit var sharedPreferences: SharedPreferences
     private lateinit var listCafe: ArrayList<Cafe>
 
     override fun onCreateView(
@@ -29,9 +30,12 @@ class CafeFragment : Fragment() {
         _binding = FragmentCafeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        listCafe = generateSongList()
+        sharedPreferences = requireContext().getSharedPreferences("CafeFinderPrefs", 0)
+        listCafe = generateCafeList()
 
-        adapter = ListCafeAdapter(listCafe,requireContext())
+        sortCafesByRating()
+
+        adapter = ListCafeAdapter(listCafe, requireContext())
         binding.rvCafe.adapter = adapter
         binding.rvCafe.layoutManager = LinearLayoutManager(context)
 
@@ -47,14 +51,25 @@ class CafeFragment : Fragment() {
         })
 
         binding.btnCategory.setOnClickListener {
-           showCategoryDialog()
+            showCategoryDialog()
         }
 
         binding.btnRecommendation.setOnClickListener {
-            filterByRecommendation()
+            sortCafesByRating()
+            adapter.notifyDataSetChanged()
         }
 
         return root
+    }
+
+
+
+
+    private fun sortCafesByRating() {
+        listCafe.forEach {
+            it.rating = sharedPreferences.getFloat(it.name, 0f)
+        }
+        listCafe.sortByDescending { it.rating }
     }
 
     private fun filterList(query: String?) {
@@ -91,9 +106,9 @@ class CafeFragment : Fragment() {
 
     private fun filterByRecommendation() {
         val filteredList = ArrayList<Cafe>()
-        for (Cafe in listCafe) {
-            if (Cafe.recommendation=="yes") {
-                filteredList.add(Cafe)
+        for (cafe in listCafe) {
+            if (cafe.recommendation == "yes") {
+                filteredList.add(cafe)
             }
         }
 
@@ -128,29 +143,29 @@ class CafeFragment : Fragment() {
         builder.show()
     }
 
-    private fun generateSongList(): ArrayList<Cafe> {
-        val songNames = resources.getStringArray(R.array.data_cafe)
-        val songDescriptions = resources.getStringArray(R.array.data_desc_cafe)
-        val songImages = resources.obtainTypedArray(R.array.data_img_cafe)
-        val songAudios = resources.obtainTypedArray(R.array.data_audio)
-        val category = resources.getStringArray(R.array.data_cash)
+    private fun generateCafeList(): ArrayList<Cafe> {
+        val cafeNames = resources.getStringArray(R.array.data_cafe)
+        val cafeDescriptions = resources.getStringArray(R.array.data_desc_cafe)
+        val cafeImages = resources.obtainTypedArray(R.array.data_img_cafe)
+        val cafeAudios = resources.obtainTypedArray(R.array.data_audio)
+        val categories = resources.getStringArray(R.array.data_cash)
         val recommended = resources.getStringArray(R.array.data_recommended)
 
-
         val cafeList = ArrayList<Cafe>()
-        for (i in songNames.indices) {
+        for (i in cafeNames.indices) {
             val cafe = Cafe(
-                songNames[i],
-                songDescriptions[i],
-                songImages.getResourceId(i, -1),
-                songAudios.getResourceId(i, -1),
-                category[i],
-                recommended[i]
+                cafeNames[i],
+                cafeDescriptions[i],
+                cafeImages.getResourceId(i, -1),
+                cafeAudios.getResourceId(i, -1),
+                categories[i],
+                recommended[i],
+                0f, // Default rating, it will be updated later
             )
             cafeList.add(cafe)
         }
-        songImages.recycle()
-        songAudios.recycle()
+        cafeImages.recycle()
+        cafeAudios.recycle()
 
         return cafeList
     }
@@ -171,19 +186,16 @@ class CafeFragment : Fragment() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
+        return when (item.itemId) {
             R.id.action_list -> {
                 binding.rvCafe.layoutManager = LinearLayoutManager(context)
-                return true
+                true
             }
-
             R.id.action_grid -> {
                 binding.rvCafe.layoutManager = GridLayoutManager(context, 2)
-                return true
+                true
             }
-
-            else -> return super.onOptionsItemSelected(item)
+            else -> super.onOptionsItemSelected(item)
         }
     }
 }
-

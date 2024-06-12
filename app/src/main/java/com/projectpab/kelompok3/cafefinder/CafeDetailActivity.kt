@@ -28,6 +28,8 @@ class CafeDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cafe_detail)
 
+        sharedPreferences = getSharedPreferences("CafeFinderPrefs", MODE_PRIVATE)
+
         val songName = intent.getStringExtra("SONG_NAME")
         val songDesc = intent.getStringExtra("SONG_DESC")
         val songImage = intent.getIntExtra("SONG_IMG_RES_ID", R.id.img_item_photo)
@@ -49,9 +51,8 @@ class CafeDetailActivity : AppCompatActivity() {
             mediaPlayer = MediaPlayer.create(this, songAudio)
         }
 
-        cafe = Cafe(songName!!, songDesc!!, songImage, songAudio, "", "")
-
-        sharedPreferences = getSharedPreferences("CafeFinderPrefs", MODE_PRIVATE)
+        val initialRating = sharedPreferences.getFloat(songName, 0f)
+        cafe = Cafe(songName!!, songDesc!!, songImage, songAudio, "", "", initialRating)
 
         updateFavoriteIcon()
 
