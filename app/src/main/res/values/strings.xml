@@ -31,4 +31,5 @@
     <string name="favorite_button_cafe">Lihat Cafe</string>
     <string name="favorite_button_delete">Delete</string>
     <string name="favorite_star_0">0</string>
+    <string name="menu">Menu</string>
 </resources>
