@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="@color/biru" /> <!-- Warna latar belakang -->
+    <solid android:color="@color/Navy_light" /> <!-- Warna latar belakang -->
     <corners android:radius="11dp" /> <!-- Radius sudut, bisa diubah sesuai kebutuhan -->
 </shape>
