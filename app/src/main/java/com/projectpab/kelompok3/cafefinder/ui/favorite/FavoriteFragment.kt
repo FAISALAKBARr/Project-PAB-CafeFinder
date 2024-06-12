@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.GridLayoutManager
 import com.projectpab.kelompok3.cafefinder.R
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.projectpab.kelompok3.cafefinder.Cafe
@@ -17,8 +18,10 @@ import com.projectpab.kelompok3.cafefinder.databinding.FragmentFavoriteBinding
 class FavoriteFragment : Fragment() {
     private var _binding: FragmentFavoriteBinding? = null
     private val binding get() = _binding!!
-    private lateinit var adapter: ListFavoriteAdapter
+    private lateinit var listAdapter: ListFavoriteAdapter
+    private lateinit var gridAdapter: GridFavoriteAdapter
     private lateinit var listCafe: ArrayList<Cafe>
+    private var isGridLayout = false
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -31,9 +34,14 @@ class FavoriteFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        listCafe = generateFavoriteCafeList()
         setupRecyclerView()
         updateFavoriteCount()
         updateCafeRatings()
+
+        binding.layoutButton.setOnClickListener {
+            toggleLayout()
+        }
     }
 
     override fun onResume() {
@@ -42,24 +50,41 @@ class FavoriteFragment : Fragment() {
     }
 
     private fun setupRecyclerView() {
-        listCafe = generateFavoriteCafeList()
-        adapter = ListFavoriteAdapter(listCafe, requireContext())
-        adapter.setOnDeleteClickListener(object : ListFavoriteAdapter.OnDeleteClickListener {
+        listAdapter = ListFavoriteAdapter(listCafe, requireContext())
+        listAdapter.setOnDeleteClickListener(object : ListFavoriteAdapter.OnDeleteClickListener {
             override fun onDeleteClick(cafe: Cafe) {
                 showDeleteConfirmationDialog(cafe)
             }
         })
 
-        binding.rvFavorite.adapter = adapter
+        gridAdapter = GridFavoriteAdapter(listCafe, requireContext())
+        gridAdapter.setOnDeleteClickListener(object : GridFavoriteAdapter.OnDeleteClickListener {
+            override fun onDeleteClick(cafe: Cafe) {
+                showDeleteConfirmationDialog(cafe)
+            }
+        })
+
+        binding.rvFavorite.adapter = listAdapter
         binding.rvFavorite.layoutManager = LinearLayoutManager(context)
     }
 
+    private fun toggleLayout() {
+        isGridLayout = !isGridLayout
+        if (isGridLayout) {
+            binding.rvFavorite.adapter = gridAdapter
+            binding.rvFavorite.layoutManager = GridLayoutManager(context, 2)
+            binding.layoutButton.setImageResource(R.drawable.gridicon)
+        } else {
+            binding.rvFavorite.adapter = listAdapter
+            binding.rvFavorite.layoutManager = LinearLayoutManager(context)
+            binding.layoutButton.setImageResource(R.drawable.listicon)
+        }
+    }
 
     private fun updateFavoriteCount() {
         val favoriteCount = FavoriteManager.getFavoriteCount(requireContext())
         val dispFavCount = binding.cafeFavoriteCount
         val oldcount = dispFavCount.text.toString()
-
         val newcount = oldcount.replace(Regex("^\\d+"), favoriteCount.toString())
         dispFavCount.text = newcount
     }
@@ -71,13 +96,15 @@ class FavoriteFragment : Fragment() {
             val rating = sharedPreferences.getFloat(cafe.name, 0f)
             cafe.rating = rating
         }
-        adapter.notifyDataSetChanged()
+        this.listAdapter.notifyDataSetChanged()
+        this.gridAdapter.notifyDataSetChanged()
     }
 
     @SuppressLint("NotifyDataSetChanged")
     fun deleteFavoriteItem(deletedCafe: Cafe) {
         listCafe.remove(deletedCafe)
-        adapter.notifyDataSetChanged()
+        this.listAdapter.notifyDataSetChanged()
+        this.gridAdapter.notifyDataSetChanged()
         updateFavoriteCount()
         FavoriteManager.removeFavorite(requireContext(), deletedCafe)
     }
@@ -95,7 +122,6 @@ class FavoriteFragment : Fragment() {
         dialog.show()
     }
 
-
     private fun generateFavoriteCafeList(): ArrayList<Cafe> {
         val favoriteNames = FavoriteManager.getFavorites(requireContext())
         val allCafes = generateCafeList()
@@ -109,7 +135,6 @@ class FavoriteFragment : Fragment() {
     }
 
     private fun generateCafeList(): ArrayList<Cafe> {
-        // Mengambil semua cafe dari resources (gunakan metode yang sama seperti di CafeFragment)
         val cafeNames = resources.getStringArray(R.array.data_cafe)
         val cafeDescriptions = resources.getStringArray(R.array.data_desc_cafe)
         val cafeImages = resources.obtainTypedArray(R.array.data_img_cafe)

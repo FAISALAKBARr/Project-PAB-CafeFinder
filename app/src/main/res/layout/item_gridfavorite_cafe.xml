@@ -1,0 +1,150 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:layout_gravity="center"
+    android:layout_margin="8dp"
+    card_view:cardCornerRadius="8dp"
+    card_view:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        android:outlineAmbientShadowColor="@color/Beige">
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/favoriteImg"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.78"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="1"
+            app:shapeAppearanceOverlay="@style/RoundedSquare"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintVertical_bias="0.0"
+            tools:src="@tools:sample/avatars" />
+
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/transparent_bg_bordered_button"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:text="Delete"
+            android:textAllCaps="false"
+            android:textColor="@color/red"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            app:layout_constraintHeight_percent="0.20"
+            app:layout_constraintWidth_percent="0.65"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/favoriteImg"
+            app:layout_constraintVertical_bias="1" />
+
+        <ImageButton
+            android:id="@+id/menuButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/transparent_bg_bordered_button"
+            android:importantForAccessibility="no"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:padding="8.2dp"
+            android:src="@drawable/menuicon"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toStartOf="@+id/deleteButton"
+            card_view:layout_constraintHorizontal_bias="0.0"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:layout_constraintVertical_bias="1.0" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/transparencyShape"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:background="@drawable/transparencybg"
+            android:scaleType="centerCrop"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintWidth_percent="1"
+            app:shapeAppearanceOverlay="@style/RoundedSquare"
+            app:layout_constraintBottom_toBottomOf="@+id/favoriteImg"
+            app:layout_constraintEnd_toEndOf="@+id/favoriteImg"
+            app:layout_constraintStart_toStartOf="@+id/favoriteImg" />
+
+        <TextView
+            android:id="@+id/cafeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoSizeMaxTextSize="20sp"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeStepGranularity="0.5sp"
+            android:autoSizeTextType="uniform"
+            android:text="@string/title_cafe"
+            android:textColor="@color/Navy"
+            android:textStyle="bold"
+            android:layout_marginBottom="2dp"
+            app:layout_constraintBottom_toBottomOf="@+id/locationicon"
+            app:layout_constraintEnd_toEndOf="@+id/transparencyShape"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/locationicon"
+            app:layout_constraintTop_toTopOf="@+id/locationicon"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/ratingCafe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoSizeMaxTextSize="20sp"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeStepGranularity="0.5sp"
+            android:autoSizeTextType="uniform"
+            android:text="@string/favorite_star_0"
+            android:textColor="@color/Navy"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/starIcon"
+            app:layout_constraintEnd_toEndOf="@+id/transparencyShape"
+            app:layout_constraintHorizontal_bias="0.05"
+            app:layout_constraintStart_toEndOf="@+id/starIcon"
+            app:layout_constraintTop_toTopOf="@+id/starIcon"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <ImageView
+            android:id="@+id/locationicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            app:layout_constraintBottom_toBottomOf="@+id/favoriteImg"
+            app:layout_constraintEnd_toEndOf="@+id/transparencyShape"
+            app:layout_constraintHorizontal_bias="0.04"
+            app:layout_constraintStart_toStartOf="@+id/transparencyShape"
+            app:layout_constraintTop_toTopOf="@+id/transparencyShape"
+            app:layout_constraintVertical_bias="0.5"
+            app:srcCompat="@drawable/locationicon" />
+
+        <ImageView
+            android:id="@+id/starIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:importantForAccessibility="no"
+            app:layout_constraintBottom_toBottomOf="@+id/favoriteImg"
+            app:layout_constraintEnd_toEndOf="@+id/transparencyShape"
+            app:layout_constraintHorizontal_bias="0.82"
+            app:layout_constraintStart_toStartOf="@+id/transparencyShape"
+            app:layout_constraintTop_toTopOf="@+id/transparencyShape"
+            app:layout_constraintVertical_bias="0.5"
+            app:srcCompat="@drawable/staricon" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
