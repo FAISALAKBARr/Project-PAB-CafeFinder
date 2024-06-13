@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/favoriteImg"
+        android:layout_width="250dp"
+        android:layout_height="180dp"
+        android:scaleType="centerCrop"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:shapeAppearanceOverlay="@style/RoundedSquare"
+        tools:src="@tools:sample/avatars" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/transparencyShape"
+        android:layout_width="252dp"
+        android:layout_height="54dp"
+        android:background="@drawable/transparencybg"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@id/favoriteImg"
+        app:layout_constraintEnd_toEndOf="@id/favoriteImg"
+        app:layout_constraintStart_toStartOf="@id/favoriteImg"
+        app:shapeAppearanceOverlay="@style/RoundedSquare" />
+
+    <ImageView
+        android:id="@+id/locationicon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="@+id/favoriteImg"
+        app:layout_constraintEnd_toEndOf="@+id/transparencyShape"
+        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintStart_toStartOf="@+id/transparencyShape"
+        app:layout_constraintTop_toTopOf="@+id/transparencyShape"
+        app:layout_constraintVertical_bias="0.545"
+        app:srcCompat="@drawable/locationicon" />
+
+    <ImageView
+        android:id="@+id/starIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="@+id/favoriteImg"
+        app:layout_constraintEnd_toEndOf="@+id/transparencyShape"
+        app:layout_constraintHorizontal_bias="0.82"
+        app:layout_constraintStart_toStartOf="@+id/transparencyShape"
+        app:layout_constraintTop_toTopOf="@+id/transparencyShape"
+        app:layout_constraintVertical_bias="0.59"
+        app:srcCompat="@drawable/staricon" />
+
+    <TextView
+        android:id="@+id/cafeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_cafe"
+        android:textColor="@color/Navy"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="3dp"
+        app:layout_constraintStart_toEndOf="@id/locationicon"
+        app:layout_constraintBottom_toBottomOf="@id/locationicon"/>
+
+    <TextView
+        android:id="@+id/ratingCafe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/favorite_star_0"
+        android:textColor="@color/Navy"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="3dp"
+        android:layout_marginStart="3dp"
+        app:layout_constraintStart_toEndOf="@id/starIcon"
+        app:layout_constraintBottom_toBottomOf="@id/starIcon"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
