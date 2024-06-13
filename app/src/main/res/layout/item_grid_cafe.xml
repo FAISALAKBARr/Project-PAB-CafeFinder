@@ -2,9 +2,8 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="350dp"
+    android:layout_width="160dp"
     android:layout_height="wrap_content"
-    android:layout_gravity="center"
     android:layout_margin="8dp"
     app:cardCornerRadius="8dp"
     app:cardElevation="4dp">
@@ -30,9 +29,9 @@
             android:layout_marginTop="8dp"
             android:background="#80000000"
             android:gravity="center"
+            android:drawableLeft="@drawable/place_24dp"
             android:maxLines="2"
             android:padding="8dp"
-            android:drawableLeft="@drawable/place_24dp"
             android:text="TextView"
             android:textColor="@color/white"
             android:textSize="16sp"
@@ -58,7 +57,7 @@
             android:layout_height="42dp"
             android:layout_gravity="left|center"
             android:layout_marginLeft="70dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/square2"
             android:importantForAccessibility="no"
             android:gravity="center"
@@ -72,9 +71,9 @@
 
     <FrameLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:layout_marginBottom="70dp"
+        android:layout_height="50dp"
+        android:layout_gravity="left|bottom"
+        android:layout_marginBottom="65dp"
         android:layout_marginStart="10dp"
         app:layout_constraintBottom_toTopOf="@id/tv_song_name"
         android:layout_marginEnd="10dp">
@@ -83,7 +82,7 @@
             android:id="@+id/box"
             android:layout_width="80dp"
             android:layout_height="50dp"
-            android:layout_gravity="left"
+            android:layout_gravity="left|center"
             android:importantForAccessibility="no"
             app:srcCompat="@drawable/square" />
 
@@ -112,6 +111,14 @@
             android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold" />
-
     </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="right|bottom"
+        android:layout_marginBottom="65dp"
+        app:layout_constraintBottom_toTopOf="@id/tv_song_name"
+        android:layout_marginEnd="10dp"/>
+
 </androidx.cardview.widget.CardView>
