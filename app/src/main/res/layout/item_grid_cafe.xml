@@ -28,14 +28,14 @@
             android:layout_gravity="bottom"
             android:layout_marginTop="8dp"
             android:background="#80000000"
-            android:gravity="center"
-            android:drawableLeft="@drawable/place_24dp"
+            android:gravity="start|center_vertical"
             android:maxLines="2"
             android:padding="8dp"
-            android:text="TextView"
+            android:text="@string/textview"
             android:textColor="@color/white"
             android:textSize="16sp"
             android:textStyle="bold"
+            app:drawableStartCompat="@drawable/place_24dp"
             tools:text="@string/song_name" />
 
         <TextView
@@ -55,14 +55,14 @@
             android:id="@+id/category"
             android:layout_width="wrap_content"
             android:layout_height="42dp"
-            android:layout_gravity="left|center"
-            android:layout_marginLeft="70dp"
+            android:layout_gravity="start|center"
+            android:layout_marginStart="70dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/square2"
             android:importantForAccessibility="no"
             android:gravity="center"
             android:padding="10dp"
-            android:text="TextView"
+            android:text="@string/textview2"
             android:textStyle="italic|bold"
             android:textColor="@color/white"
             android:textSize="14sp" />
@@ -72,7 +72,7 @@
     <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:layout_gravity="left|bottom"
+        android:layout_gravity="start|bottom"
         android:layout_marginBottom="65dp"
         android:layout_marginStart="10dp"
         app:layout_constraintBottom_toTopOf="@id/tv_song_name"
@@ -82,7 +82,7 @@
             android:id="@+id/box"
             android:layout_width="80dp"
             android:layout_height="50dp"
-            android:layout_gravity="left|center"
+            android:layout_gravity="start|center"
             android:importantForAccessibility="no"
             app:srcCompat="@drawable/square" />
 
@@ -91,8 +91,8 @@
             android:layout_width="24dp"
             android:layout_height="24dp"
             app:layout_constraintStart_toStartOf="@id/box"
-            android:layout_marginLeft="10dp"
-            android:layout_gravity="left|center"
+            android:layout_marginStart="10dp"
+            android:layout_gravity="start|center"
             android:importantForAccessibility="no"
             app:srcCompat="@drawable/staricon" />
 
@@ -100,25 +100,16 @@
             android:id="@+id/rating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_gravity="left|center"
+            android:layout_marginStart="30dp"
+            android:layout_gravity="start|center"
             app:layout_constraintStart_toEndOf="@id/starIcon"
             android:importantForAccessibility="no"
             android:maxLines="2"
             android:padding="8dp"
-            android:text="0"
+            android:text="@string/ratingdefault"
             android:gravity="center"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold" />
     </FrameLayout>
-
-    <FrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_gravity="right|bottom"
-        android:layout_marginBottom="65dp"
-        app:layout_constraintBottom_toTopOf="@id/tv_song_name"
-        android:layout_marginEnd="10dp"/>
-
 </androidx.cardview.widget.CardView>
