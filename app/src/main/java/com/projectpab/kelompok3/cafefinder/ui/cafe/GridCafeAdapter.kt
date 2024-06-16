@@ -13,17 +13,17 @@ import com.projectpab.kelompok3.cafefinder.R
 import com.projectpab.kelompok3.cafefinder.Cafe
 import com.projectpab.kelompok3.cafefinder.CafeDetailActivity
 
-class ListCafeAdapter (private var listCafe: ArrayList<Cafe>,private val context: Context) : RecyclerView.Adapter<ListCafeAdapter.ListViewHolder>() {
+class GridCafeAdapter (private var listCafe: ArrayList<Cafe>,private val context: Context) : RecyclerView.Adapter<GridCafeAdapter.GridViewHolder>() {
     private lateinit var onItemClickCallback: OnItemClickCallback
     private val sharedPreferences: SharedPreferences = context.getSharedPreferences("CafeFinderPrefs", Context.MODE_PRIVATE)
 
-    private var isGridMode = false
+    private var isGridMode = true
 
     fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
         this.onItemClickCallback = onItemClickCallback
     }
 
-    class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class GridViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imgPhoto: ImageView = itemView.findViewById(R.id.img_item_photo)
         val tvName: TextView = itemView.findViewById(R.id.tv_song_name)
         val tvDescription: TextView = itemView.findViewById(R.id.tv_song_description)
@@ -41,15 +41,15 @@ class ListCafeAdapter (private var listCafe: ArrayList<Cafe>,private val context
         notifyDataSetChanged()
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GridViewHolder {
         val layoutRes = if (isGridMode) R.layout.item_grid_cafe else R.layout.item_row_cafe
         val view = LayoutInflater.from(parent.context).inflate(layoutRes, parent, false)
-        return ListViewHolder(view)
+        return GridViewHolder(view)
     }
 
     override fun getItemCount(): Int = listCafe.size
 
-    override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: GridCafeAdapter.GridViewHolder, position: Int) {
         val (name, desc, img, category, recommendation, rating) = listCafe[position]
         holder.imgPhoto.setImageResource(img)
         holder.tvName.text = name
